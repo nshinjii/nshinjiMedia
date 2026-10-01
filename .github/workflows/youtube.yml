@@ -46,7 +46,7 @@ jobs:
               pass
           try:
               root = ET.fromstring(get('https://www.youtube.com/feeds/videos.xml?channel_id=UCIa-bzHuoaBa6HxGaRTyA7g'))
-              ns = {'a': 'http://www.w3.org/2005/Atom', 'yt': 'http://www.youtube.com/xml/schemas/2015'}
+              ns = {'a': 'http://www.w3.org/2005/Atom', 'yt': 'http://www.youtube.com/xml/schemas/2015', 'm': 'http://search.yahoo.com/mrss/'}
               videos = {v['id']: v for v in data['videos']}
               entries = root.findall('a:entry', ns)
               if not entries:
@@ -67,7 +67,9 @@ jobs:
                               kind = 'Videos' if '/watch' in response.url else 'Shorts'
                       except Exception:
                           kind = 'Shorts' if re.search(r'#shorts\b', title, re.I) else 'Videos'
-                  videos[vid] = {'id': vid, 'title': title, 'date': date, 'type': kind}
+                  stats = entry.find('m:group/m:community/m:statistics', ns)
+                  views = stats.get('views') if stats is not None else old.get('views')
+                  videos[vid] = {'id': vid, 'title': title, 'date': date, 'type': kind, 'views': views}
               data = {'channelId': 'UCIa-bzHuoaBa6HxGaRTyA7g', 'videos': sorted(videos.values(), key=lambda v: v.get('date', ''), reverse=True), 'youtubeUpdatedAt': datetime.now(timezone.utc).isoformat()}
               print('YouTube refreshed:', len(data['videos']), 'uploads')
           except Exception as error:
