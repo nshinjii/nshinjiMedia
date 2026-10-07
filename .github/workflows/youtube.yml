@@ -81,7 +81,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Prepare website
         run: |
-          cp index.html CNAME _site/
+          cp index.html CNAME game-*.mp4 game-*.jpg _site/
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v4
         with:
