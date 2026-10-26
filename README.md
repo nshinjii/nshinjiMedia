@@ -1,10 +1,10 @@
 # Nshinji Media
 
-Creator and website-design portfolio published at https://nshinjimedia.co.uk/.
+Gaming, music and streaming site for Nshinji, published at https://nshinjimedia.co.uk/.
 
 ## Website
 
-`index.html` contains the complete website, styles, and JavaScript. Navigation uses hash links. Videos and Shorts use the public uploads for YouTube channel `UCIa-bzHuoaBa6HxGaRTyA7g`. Website enquiries use Discord `e9vg`.
+`index.html` contains the complete website, styles, and JavaScript. Navigation uses hash links. Videos and Shorts use the public uploads for YouTube channel `UCIa-bzHuoaBa6HxGaRTyA7g`. Contact is by email or Discord `e9vg`.
 
 ## Publishing and automatic updates
 
