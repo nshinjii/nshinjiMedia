@@ -297,7 +297,25 @@
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
       .reveal,.fade-up{opacity:1;transform:none}.hero h1 .line>span{transform:none}
     }
-  </style>
+  /* cookie banner */
+.ck{position:fixed;z-index:70;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));max-width:520px;max-height:calc(100dvh - 32px);overflow:auto;padding:20px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:calc(var(--radius) + 4px);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.ck[hidden]{display:none}
+.ck:focus{outline:none}
+.ck h2{margin:0;font-size:1.125rem;font-weight:800;letter-spacing:-.01em;line-height:1.3}
+.ck p,.ck li{font-size:var(--step-small);color:var(--muted);line-height:1.5}
+.ck p{margin:6px 0 0}
+.ck ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.ck li b{color:var(--ink);font-weight:500}
+.ck-acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
+.ck-btn{all:unset;box-sizing:border-box;min-height:44px;padding:0 12px;display:grid;place-items:center;text-align:center;line-height:1.2;border-radius:var(--radius);background:var(--surface-2);color:var(--ink);font-weight:500;font-size:var(--step-small);cursor:pointer;transition:background-color .2s}
+.ck-btn:hover{background:var(--surface-3)}
+.ck-btn:focus-visible,.ck-link:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}
+.ck-btn[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--accent)}
+.ck-link{all:unset;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:420px){.ck-acts{grid-template-columns:1fr}}
+.ck-gate{display:grid;place-content:center;justify-items:center;gap:14px;height:100%;min-height:260px;padding:24px;text-align:center;background:var(--surface);color:var(--muted);font-size:var(--step-small)}
+.ck-gate p{max-width:40ch;line-height:1.5}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -511,7 +529,7 @@
         </nav>
       </div>
       <div class="footer-word" aria-hidden="true">NSHINJI</div>
-      <div class="footer-bottom"><span>© <span id="year">2026</span> Nshinji Media</span><span>music / gaming / creating</span><a href="#home">Back to top ↑</a></div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> Nshinji Media</span><span>music / gaming / creating</span><button class="ck-link" type="button" data-ck-open>Cookie settings</button><a href="#home">Back to top ↑</a></div>
     </div>
   </footer>
 
@@ -524,6 +542,43 @@
 
   <noscript><style>.reveal,.fade-up{opacity:1!important;transform:none!important}.hero h1 .line>span{transform:none!important}</style></noscript>
 
+  <section class="ck" id="ck" hidden tabindex="-1" aria-labelledby="ck-h">
+    <h2 id="ck-h">Cookies on this site</h2>
+    <p>Pick what this site may save in your browser. You can change it any time from Cookie settings at the bottom of the page.</p>
+    <ul>
+      <li><b>Required:</b> remembers your cookie choice.</li>
+      <li><b>Optional:</b> the YouTube and Twitch players, which set their own cookies. Without them you can still watch on YouTube and Twitch.</li>
+    </ul>
+    <div class="ck-acts">
+      <button class="ck-btn" type="button" data-ck="all">Accept all</button>
+      <button class="ck-btn" type="button" data-ck="required">Required only</button>
+      <button class="ck-btn" type="button" data-ck="none">Reject all</button>
+    </div>
+  </section>
+<script>
+// cookie choice: 'all', 'required' or 'none'. 'none' is only kept for this visit, so the banner asks again next time.
+(()=>{
+  const KEY='nshinji-consent', OK=['all','required','none'], bar=document.getElementById('ck'), subs=[];
+  let choice=null, returnTo=null;
+  try{ choice=localStorage.getItem(KEY)||sessionStorage.getItem(KEY); }catch(_){}
+  if(!OK.includes(choice)) choice=null;
+  function mark(){ bar.querySelectorAll('[data-ck]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ck===choice))); }
+  function set(c){
+    if(!OK.includes(c)) return;
+    choice=c;
+    try{ localStorage.removeItem(KEY); sessionStorage.removeItem(KEY); (c==='none'?sessionStorage:localStorage).setItem(KEY,c); }catch(_){}
+    bar.hidden=true;
+    subs.forEach(f=>{ try{ f(c); }catch(_){} });
+  }
+  function hide(){ bar.hidden=true; if(returnTo){ returnTo.focus(); returnTo=null; } }
+  function show(focus){ mark(); bar.hidden=false; if(focus) bar.focus(); }
+  bar.addEventListener('click',e=>{ const b=e.target.closest('[data-ck]'); if(b){ set(b.dataset.ck); hide(); } });
+  bar.addEventListener('keydown',e=>{ if(e.key==='Escape' && choice){ hide(); } });
+  document.addEventListener('click',e=>{ const o=e.target.closest('[data-ck-open]'); if(o){ e.preventDefault(); returnTo=o; show(true); } });
+  window.nshinjiConsent={ get:()=>choice, set, on:f=>subs.push(f) };
+  if(!choice) show(false);
+})();
+</script>
   <script>
 let uploads=[{"id":"WnypGtR4fjg","title":"How To Play OG Fortnite Chapter 2 Season 2 in 2026 | Project Stellar Tutorial","date":"","type":"Videos"},{"date":"","id":"mI5DrcDWg5c","title":"Bivol Got BANNED From Blox Fruits?! 💀 #BloxFruits #shorts","type":"Shorts"},{"date":"","id":"9AlMwf4K9ww","title":"THIS STEAL A EGG WIFI GLITCH IS BROKEN 💀🥚 #shorts","type":"Shorts"},{"date":"","id":"OHzf1_grFHQ","title":"COMBAT V2 Has Finally Been Revealed! 😳 #shorts","type":"Shorts"},{"date":"","id":"_S6grA5vhoQ","title":"😱 SECRET Sewer Quest in Fountain City! Blox Fruits","type":"Shorts"},{"date":"","id":"81vtZXNPZO0","title":"INSANE Blox Fruits XP GLITCH 😱 Level Up FAST!","type":"Shorts"},{"date":"","id":"PCMz1Vx7j4Y","title":"The NEW Blox Fruits trailer is actually insane 😭🔥","type":"Shorts"}],videoFilter='All',videoQuery='',videoChecked='';
 
@@ -578,7 +633,15 @@ let uploads=[{"id":"WnypGtR4fjg","title":"How To Play OG Fortnite Chapter 2 Seas
   }
   let twitchStarted = false;
   function startTwitch() {
-    if (twitchStarted) return; twitchStarted = true;
+    if (twitchStarted) return;
+    if (window.nshinjiConsent.get() !== 'all') {
+      const box = $('#twitch-player');
+      if (!box.querySelector('.ck-gate')) box.innerHTML = '<div class="ck-gate"><p>The Twitch player sets its own cookies, so it only loads after you accept all cookies.</p><button class="btn btn-sm btn-primary" type="button" data-ck-allow>Accept all and play</button></div>';
+      liveStatus.textContent = '◌ PLAYER OFF'; liveTitle.textContent = 'Watch on Twitch'; liveCopy.textContent = 'The player here is off because of your cookie choice. The Twitch link still works.';
+      return;
+    }
+    $('#twitch-player').replaceChildren();
+    twitchStarted = true;
     const s = document.createElement('script');
     s.src = 'https://player.twitch.tv/js/embed/v1.js';
     s.onload = () => {
@@ -651,8 +714,15 @@ let uploads=[{"id":"WnypGtR4fjg","title":"How To Play OG Fortnite Chapter 2 Seas
     if (!video) return;
     $('#video-title').textContent = video.title;
     $('#video-youtube').href = 'https://www.youtube.com/watch?v=' + video.id;
+    if (window.nshinjiConsent.get() !== 'all') { $('#youtube-player').innerHTML = '<div class="ck-gate"><p>The YouTube player sets its own cookies, so it only loads after you accept all cookies.</p><button class="btn btn-sm btn-primary" type="button" data-ck-allow>Accept all and play</button></div>'; videoDialog.showModal(); return; }
     $('#youtube-player').innerHTML = '<iframe title="YouTube video player" src="https://www.youtube-nocookie.com/embed/' + video.id + '?autoplay=1&rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
     videoDialog.showModal();
+  });
+  document.addEventListener('click', e => { if (e.target.closest('[data-ck-allow]')) window.nshinjiConsent.set('all'); });
+  window.nshinjiConsent.on(c => {
+    if (c !== 'all') return;
+    if (videoDialog.open) { const id = new URL($('#video-youtube').href).searchParams.get('v'); if (id) $('#youtube-player').innerHTML = '<iframe title="YouTube video player" src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>'; }
+    if (!$('#live').hidden) startTwitch();
   });
   $$('#video-search,#shorts-search').forEach(input => input.addEventListener('input', f));
   $('#close-video').addEventListener('click', () => videoDialog.close());
