@@ -14,4 +14,6 @@ The workflow fetches the latest YouTube RSS entries, merges them with the previo
 
 To update the design, edit `index.html`, commit to `main`, and confirm the latest **Update YouTube Videos** run succeeds. Keep the `let uploads=[...],videoFilter=` seed declaration intact: the workflow reads it as its initial archive.
 
+`privacy.html`, `terms.html`, `404.html`, `favicon.svg`, `apple-touch-icon.png`, `og-image.png`, `robots.txt` and `sitemap.xml` are copied into the published site by the workflow. Add any new top-level file to the `cp` line in `.github/workflows/youtube.yml` or it won't be deployed.
+
 `CNAME` stores the custom domain. Preserve it when publishing. No secrets or API keys are needed for the public feed.
