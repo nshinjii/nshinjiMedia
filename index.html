@@ -1,796 +1,294 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Nshinji Media — Gaming, Music &amp; Streams</title>
-  <meta name="description" content="Gaming videos, Shorts, Twitch streams and music from Nshinji. Watch, listen and follow along." />
-  <meta name="theme-color" content="#09080c" />
-  <link rel="canonical" href="https://nshinjimedia.co.uk/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Nshinji Media — Gaming, Music &amp; Streams" />
-  <meta property="og:description" content="Gaming videos, Shorts, Twitch streams and music from Nshinji. Watch, listen and follow along." />
-  <meta property="og:url" content="https://nshinjimedia.co.uk/" />
-  <meta name="twitter:card" content="summary" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%237c3aed'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial,sans-serif' font-size='42' font-weight='900' fill='%23ffffff'%3EN%3C/text%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" />
-  <style>
-    /* nshinji media — portfolio design system (purple build) */
-    :root{
-      --bg:#09080c; --surface:#141219; --surface-2:#1d1a24; --surface-3:#2a2633; --ink:#f3f1f7; --muted:#aaa5b6;
-      --paper:#efedf4; --paper-ink:#0b0a10; --paper-muted:#4d4858;
-      --accent:#7c3aed; --accent-ink:#fff; --accent-text:#b99cff; --line:#36313f; --edge:color-mix(in srgb,#36313f 60%,transparent);
-      --ok:#3ddc84; --yt:#ff0033; --twitch:#9146ff; --discord:#5865f2;
-      --m:clamp(20px,2.2vw,32px); --max:1160px; --radius:6px;
-      --ease:cubic-bezier(.16,1,.3,1); --snap:cubic-bezier(.2,.9,.25,1.35);
-      --step-small:clamp(.875rem,.85rem + .1vw,.9375rem); --step-body:clamp(1.0625rem,1rem + .25vw,1.1875rem);
-      --step-lead:clamp(1.125rem,1.05rem + .4vw,1.375rem); --step-head:clamp(2.25rem,1.3rem + 3vw,3.75rem);
-      color-scheme:dark; font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif; font-optical-sizing:auto;
-    }
-    *,*::before,*::after{box-sizing:border-box}
-    [hidden]{display:none!important}
-    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-color:#3a3545 var(--bg)}
-    body{margin:0;background:var(--bg);color:var(--ink);font-size:var(--step-body);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    ::selection{background:var(--accent);color:#fff}
-    img,svg,video{display:block;max-width:100%}
-    svg{width:1em;height:1em}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit;color:inherit}
-    :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
-    h1,h2,h3,p,figure{margin:0}
-    h1,h2,h3{font-weight:800;letter-spacing:-.035em;line-height:.98;text-wrap:balance}
-    .aura,.grid-lines,.grain,.marquee{display:none}
-    .skip-link{position:absolute;left:var(--m);top:-60px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:var(--radius);z-index:100;font-weight:500}
-    .skip-link:focus{top:12px}
-    .wrap{padding-left:max(var(--m),calc((100% - var(--max)) / 2));padding-right:max(var(--m),calc((100% - var(--max)) / 2))}
-    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com https://img.youtube.com; connect-src 'self' https://abacus.jasoncameron.dev; base-uri 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>nshinji · gaming, music &amp; streams</title>
+<meta name="description" content="nshinji: OG Fortnite and Roblox videos, Shorts, Twitch streams and music. Every link in one place.">
+<meta name="theme-color" content="#07060a">
+<link rel="canonical" href="https://nshinjimedia.co.uk/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="nshinji">
+<meta property="og:description" content="Gaming, music and streams. Every link in one place.">
+<meta property="og:url" content="https://nshinjimedia.co.uk/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='14' y='2' width='14' height='8' rx='2' fill='%237c3aed'/%3E%3Crect x='36' y='2' width='14' height='8' rx='2' fill='%237c3aed'/%3E%3Crect x='2' y='8' width='60' height='54' rx='8' fill='%237c3aed'/%3E%3Cpath d='M19 52V20h7l12 19V20h7v32h-7L26 33v19z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07060a;--ink:#f4f1fb;--muted:#a49cb8;--accent:#7c3aed;--accent-2:#a77bff;--glow:#8b5cf6;--glass:rgba(22,17,34,.55);--line:rgba(167,123,255,.22);--ok:#3ddc84;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;cursor:default}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:8px}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-    /* buttons */
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:52px;padding:0 22px;border-radius:var(--radius);border:0;cursor:pointer;font-weight:500;background:var(--surface-2);color:var(--ink);transition:background-color .2s,color .2s,transform .25s var(--ease);white-space:nowrap}
-    .btn:hover{background:var(--surface-3)}
-    .btn:active{transform:translateY(2px)}
-    .btn svg{width:1.1em;height:1.1em;flex:none}
-    .btn-primary{background:var(--accent);color:#fff}
-    .btn-primary:hover{background:var(--ink);color:var(--bg)}
-    .btn-sm{min-height:44px;padding:0 16px;font-size:var(--step-small)}
-    .btn-light{background:var(--paper);color:var(--paper-ink)}
-    .btn-light:hover{background:#fff}
-    .btn-twitch{background:var(--twitch);color:#fff}
-    .btn-discord{background:var(--discord);color:#fff}
-    .btn-twitch:hover,.btn-discord:hover{background:var(--ink);color:var(--bg)}
+/* background */
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+.aurora{position:fixed;inset:-20%;z-index:0;pointer-events:none;filter:blur(80px);opacity:.75}
+.aurora i{position:absolute;border-radius:50%;mix-blend-mode:screen;animation:drift 22s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:46vmax;height:46vmax;left:8%;top:6%;background:#5b21b6}
+.aurora i:nth-child(2){width:38vmax;height:38vmax;right:4%;top:30%;background:#7c3aed;animation-duration:28s;animation-delay:-6s;opacity:.7}
+.aurora i:nth-child(3){width:30vmax;height:30vmax;left:30%;bottom:-4%;background:#2e1065;animation-duration:32s;animation-delay:-12s}
+@keyframes drift{to{transform:translate(6vmax,-5vmax) scale(1.15)}}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.vignette{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,.75))}
 
-    /* nav — sticky glass, like the portfolio */
-    .nav{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:24px;padding:12px max(var(--m),calc((100% - var(--max)) / 2));background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid var(--edge)}
-    .brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.375rem;letter-spacing:-.04em;min-height:44px}
-    .brand small{font-size:.8rem;font-weight:500;color:var(--muted);letter-spacing:0}
-    .brand-mark{position:relative;display:inline-grid;place-items:center;width:30px;height:30px;background:var(--accent);color:#fff;border-radius:4px;font-size:1.05rem}
-    .brand-mark::before{content:"";position:absolute;top:-4px;left:7px;width:16px;height:4px;background:var(--accent);border-radius:2px 2px 0 0}
-    .nav-links{display:flex;gap:clamp(14px,2vw,30px);margin-left:auto}
-    .nav-links a{color:var(--muted);font-weight:500;min-height:44px;display:inline-flex;align-items:center;position:relative;transition:color .2s}
-    .nav-links a:hover{color:var(--ink)}
-    .nav-links a.active{color:var(--ink)}
-    .nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:3px;border-radius:2px;background:var(--accent)}
-    .nav-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:var(--radius);background:var(--accent);color:#fff;font-weight:500}
-    .nav-cta:hover{background:var(--ink);color:var(--bg)}
-    .menu-toggle{display:none;position:relative;width:44px;height:44px;border:0;border-radius:var(--radius);background:var(--surface);cursor:pointer}
-    .menu-toggle span{position:absolute;display:block;left:12px;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s var(--ease),top .3s var(--ease)}
-    .menu-toggle span:nth-child(1){top:17px}.menu-toggle span:nth-child(2){top:25px}
-    .menu-open .menu-toggle span:nth-child(1){top:21px;transform:rotate(45deg)}
-    .menu-open .menu-toggle span:nth-child(2){top:21px;transform:rotate(-45deg)}
-    .mobile-menu{position:fixed;inset:0;z-index:35;background:var(--bg);padding:88px var(--m) 32px;display:flex;flex-direction:column;justify-content:space-between;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
-    .menu-open .mobile-menu{opacity:1;visibility:visible}
-    .mobile-menu nav{display:grid;gap:4px}
-    .mobile-menu a{display:flex;align-items:baseline;gap:14px;min-height:60px;padding:8px 14px;border-radius:var(--radius);background:var(--surface);font-weight:800;font-size:1.75rem;letter-spacing:-.03em}
-    .mobile-menu a small{font-size:.8rem;color:var(--muted);font-weight:500;letter-spacing:0}
-    .mobile-menu a.active{background:var(--accent);color:#fff}.mobile-menu a.active small{color:#e4d8ff}
-    .menu-foot{display:flex;justify-content:space-between;color:var(--muted);font-size:var(--step-small)}
-    @media (max-width:860px){.nav{gap:10px}.nav-links{display:none}.nav-cta{margin-left:auto}.menu-toggle{display:block;flex:none}}
-    @media (max-width:420px){.brand small{display:none}.nav-cta{padding:0 14px}}
+/* click to enter */
+.gate{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:#030205;cursor:pointer;transition:opacity .8s ease,visibility .8s}
+.gate.gone{opacity:0;visibility:hidden}
+.gate p{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:clamp(.95rem,.8rem + .6vw,1.25rem);letter-spacing:.35em;text-transform:lowercase;color:var(--ink);animation:breathe 2.4s ease-in-out infinite;text-shadow:0 0 18px var(--glow)}
+.gate small{display:block;margin-top:14px;text-align:center;letter-spacing:.1em;color:var(--muted);font-size:.75rem}
+@keyframes breathe{50%{opacity:.35}}
 
-    /* panels */
-    .tab-panel{padding:clamp(48px,7vw,96px) 0 clamp(64px,7vw,112px);animation:panel-in .5s var(--ease) both}
-    @keyframes panel-in{from{opacity:0;transform:translateY(10px)}}
-    .eyebrow{display:block;color:var(--accent-text);font-weight:500;font-size:var(--step-small);margin-bottom:14px}
-    h2{font-size:var(--step-head)}
-    .dot{color:var(--accent)}
-    .page-head,.section-intro{display:flex;justify-content:space-between;align-items:end;gap:24px 48px;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,56px)}
-    .page-head p,.section-intro p{max-width:38ch;color:var(--muted);font-size:var(--step-lead);line-height:1.35}
-    .section-intro{margin-top:clamp(72px,8vw,120px)}
+/* layout */
+.stage{position:relative;z-index:2;min-height:100svh;display:grid;place-items:center;padding:max(28px,env(safe-area-inset-top)) 16px max(28px,env(safe-area-inset-bottom))}
+.card{width:min(100%,520px);position:relative;padding:28px 26px 22px;border-radius:24px;background:var(--glass);border:1px solid var(--line);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);box-shadow:0 0 0 1px rgba(255,255,255,.03) inset,0 30px 90px -20px rgba(124,58,237,.55),0 0 60px -10px rgba(139,92,246,.35);transform-style:preserve-3d;transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s ease-out;opacity:0;translate:0 24px}
+.entered .card{opacity:1;translate:0 0;transition:opacity .9s ease .15s,translate .9s cubic-bezier(.2,.9,.2,1) .15s,transform .2s ease-out}
+.card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(140deg,rgba(167,123,255,.9),transparent 35%,transparent 65%,rgba(124,58,237,.8));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 
-    /* hero */
-    .hero{position:relative;isolation:isolate;padding-top:clamp(40px,6vw,80px)}
-    .hero::before{content:"";position:absolute;z-index:-1;inset:-80px 0 auto;height:560px;background:radial-gradient(55% 70% at 15% 20%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%);pointer-events:none}
-    .hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4vw,64px);align-items:center}
-    .status{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:var(--step-small);padding:6px 12px 6px 10px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--edge)}
-    .pulse{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 #3ddc8466;animation:pulse 2.4s infinite}
-    @keyframes pulse{70%{box-shadow:0 0 0 8px #3ddc8400}100%{box-shadow:0 0 0 0 #3ddc8400}}
-    .hero h1{margin:22px 0 22px;font-size:clamp(3.25rem,1.6rem + 6vw,6.5rem);line-height:.9;letter-spacing:-.05em}
-    .hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
-    .hero h1 .line>span{display:inline-block;transform:translateY(105%);animation:rise .9s var(--ease) forwards}
-    .hero h1 .line:nth-child(2)>span{animation-delay:.1s}
-    .hero h1 .glow{color:var(--accent-text)}
-    @keyframes rise{to{transform:none}}
-    .fade-up{opacity:0;transform:translateY(14px);animation:fade-up .8s var(--ease) forwards}
-    @keyframes fade-up{to{opacity:1;transform:none}}
-    .hero-copy{display:grid;gap:6px;max-width:34ch}
-    .hero-title{font-size:var(--step-lead);font-weight:500;line-height:1.3;letter-spacing:-.01em}
-    #hero-meta{color:var(--muted);font-size:var(--step-small)}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+/* profile head */
+.head{display:flex;flex-direction:column;align-items:center;text-align:center}
+.avatar{position:relative;width:104px;height:104px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#9d6bff,#5b21b6 70%);box-shadow:0 0 0 4px rgba(7,6,10,.9),0 0 0 6px var(--accent),0 0 40px 6px rgba(139,92,246,.55)}
+.avatar svg{width:56px;height:56px}
+.avatar::after{content:"";position:absolute;right:4px;bottom:6px;width:18px;height:18px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px #120e1b}
+.ring{position:absolute;inset:-14px;border-radius:50%;border:1px dashed rgba(167,123,255,.45);animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-    .feature-player{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:1px solid var(--edge);border-radius:10px;overflow:hidden;background:var(--surface);cursor:pointer;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
-    .feature-player img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
-    .feature-player:hover img{transform:scale(1.03)}
-    .tag{position:absolute;top:12px;left:12px;z-index:2;padding:4px 10px;border-radius:4px;background:rgba(9,8,12,.78);color:var(--ink);font-weight:500;font-size:.8125rem;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-    .tag.lime{background:var(--accent);color:#fff}
-    .play-btn{position:absolute;left:50%;top:50%;z-index:2;display:grid;place-items:center;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:12px;background:var(--accent);color:#fff;transition:transform .35s var(--snap)}
-    .play-btn svg{width:26px;height:26px;margin-left:3px}
-    .feature-player:hover .play-btn,.video-thumb:hover .play-btn{transform:scale(1.1)}
-    .feature-bar{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:linear-gradient(transparent,rgba(9,8,12,.85));font-size:.8125rem;color:var(--muted)}
-    .eq{display:inline-flex;align-items:end;gap:3px;height:14px}
-    .eq i{width:3px;background:var(--accent-text);border-radius:2px;animation:eq 1s ease-in-out infinite alternate}
-    .eq i:nth-child(1){height:40%}.eq i:nth-child(2){height:90%;animation-delay:.2s}.eq i:nth-child(3){height:60%;animation-delay:.4s}.eq i:nth-child(4){height:80%;animation-delay:.1s}
-    @keyframes eq{to{transform:scaleY(.35)}}
+.bricks{display:flex;gap:5px;margin-top:22px;justify-content:center}
+.bricks span{position:relative;display:grid;place-items:center;width:clamp(34px,8.5vw,44px);height:clamp(36px,9vw,46px);border-radius:6px;background:linear-gradient(180deg,#8b4cf5,#6a2bd6);font-weight:800;font-size:clamp(1.25rem,1rem + 1.2vw,1.65rem);color:#fff;box-shadow:0 4px 0 #4c1a9e,0 10px 18px -6px rgba(124,58,237,.8);animation:pop .6s cubic-bezier(.3,1.6,.5,1) backwards;animation-delay:calc(var(--i) * 70ms + .35s)}
+.bricks span::before,.bricks span::after{content:"";position:absolute;top:-6px;width:28%;height:7px;border-radius:3px 3px 1px 1px;background:#8b4cf5}
+.bricks span::before{left:14%}.bricks span::after{right:14%}
+.bricks span:hover{transform:translateY(-4px);transition:transform .2s}
+.entered .bricks span{animation-play-state:running}
+.bricks span{animation-play-state:paused}
+@keyframes pop{from{transform:translateY(-30px) scale(.6);opacity:0}}
+.handle{margin-top:12px;font-family:"JetBrains Mono",monospace;font-size:.875rem;color:var(--muted)}
 
-    /* the portfolio's brick wall */
-    .wall{margin-top:clamp(48px,6vw,80px)}
-    .bricks{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(5px,.8vw,12px);list-style:none;margin:0;padding:8px 0 0}
-    .brick{all:unset;box-sizing:border-box;position:relative;display:grid;place-items:center;aspect-ratio:1.6;background:var(--surface-2);border-radius:clamp(4px,.6vw,8px);font-weight:800;font-size:clamp(2rem,6.4vw,5.5rem);letter-spacing:-.04em;line-height:1;cursor:pointer;color:var(--ink);transition:background-color .25s,color .25s;-webkit-tap-highlight-color:transparent}
-    .brick:nth-child(even){background:var(--surface)}
-    .brick::before,.brick::after{content:"";position:absolute;top:calc(-1 * clamp(4px,.55vw,8px));width:24%;height:clamp(4px,.55vw,8px);background:inherit;border-radius:3px 3px 0 0}
-    .brick::before{left:16%}.brick::after{right:16%}
-    .brick:hover{background:var(--surface-3)}
-    .brick.lit{background:var(--accent);color:#fff}
-    .brick:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
-    .wall-foot{display:flex;justify-content:space-between;gap:16px;margin-top:14px;color:var(--muted);font-size:var(--step-small)}
-    @media (max-width:640px){.bricks{grid-template-columns:repeat(8,1fr);row-gap:22px}.brick{grid-column:span 2;aspect-ratio:1.05;font-size:clamp(2.4rem,14vw,4.2rem)}.brick:nth-child(5){grid-column:2/span 2}}
+.badges{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;justify-content:center}
+.badge{position:relative;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:rgba(124,58,237,.16);border:1px solid var(--line);cursor:help}
+.badge svg{width:18px;height:18px;color:var(--accent-2)}
+.badge .tip{position:absolute;bottom:calc(100% + 8px);left:50%;translate:-50% 4px;white-space:nowrap;padding:6px 10px;border-radius:8px;background:#000;border:1px solid var(--line);font-size:.8125rem;opacity:0;pointer-events:none;transition:opacity .15s,translate .15s;z-index:5}
+.badge:hover .tip,.badge:focus-visible .tip{opacity:1;translate:-50% 0}
 
-    /* video grids */
-    .video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.6vw,24px)}
-    .video-grid.featured .video-card:first-child{grid-column:span 2;grid-row:span 2}
-    .shorts-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
-    #home-shorts{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .video-card{display:flex;flex-direction:column;gap:12px;animation:card-in .6s var(--ease) both;animation-delay:calc(var(--i,0) * 50ms)}
-    @keyframes card-in{from{opacity:0;transform:translateY(12px)}}
-    .video-thumb{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:1px solid var(--edge);border-radius:8px;overflow:hidden;background:var(--surface);cursor:pointer}
-    .shorts-grid .video-thumb{aspect-ratio:9/16}
-    .video-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
-    .video-thumb:hover img{transform:scale(1.04)}
-    .video-thumb .play-btn{width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:10px;opacity:0;transition:opacity .25s,transform .35s var(--snap)}
-    .video-thumb:hover .play-btn,.video-thumb:focus-visible .play-btn{opacity:1}
-    .video-meta{display:grid;gap:6px}
-    .meta-row{display:flex;gap:14px;color:var(--muted);font-size:var(--step-small)}
-    .views{display:inline-flex;align-items:center;gap:5px}
-    .views svg{width:15px;height:15px}
-    .video-title{all:unset;cursor:pointer;font-weight:500;line-height:1.3;letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-    .video-title:hover{color:var(--accent-text)}
-    .video-grid.featured .video-card:first-child .video-title{font-size:var(--step-lead);font-weight:800;letter-spacing:-.025em}
-    .video-error{grid-column:1/-1;padding:40px;border-radius:var(--radius);background:var(--surface);color:var(--muted);text-align:center}
-    @media (max-width:900px){.video-grid{grid-template-columns:1fr 1fr}.shorts-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    @media (max-width:560px){.video-grid{grid-template-columns:1fr}.video-grid.featured .video-card:first-child{grid-column:auto;grid-row:auto}.shorts-grid{grid-template-columns:1fr 1fr}}
+.typed{margin-top:16px;min-height:1.6em;font-size:1.0625rem;color:var(--ink)}
+.typed .cur{display:inline-block;width:2px;height:1.05em;margin-left:2px;vertical-align:-2px;background:var(--accent-2);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.meta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:12px;font-size:.875rem;color:var(--muted)}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+.meta svg{width:16px;height:16px}
 
-    .channel-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-    .channel{display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 8px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--edge)}
-    .channel b{display:block;font-weight:800}
-    .channel span span{display:block;color:var(--muted);font-size:var(--step-small)}
-    .channel-avatar{display:grid;place-items:center;width:44px;height:44px;border-radius:6px;background:var(--yt);color:#fff}
-    .channel-avatar svg{width:22px;height:22px}
-    .search{display:flex;align-items:center;gap:10px;flex:1;max-width:420px;min-height:52px;padding:0 14px;border-radius:var(--radius);background:var(--surface);border:2px solid transparent;transition:border-color .2s}
-    .search:focus-within{border-color:var(--accent)}
-    .search svg{color:var(--muted);width:18px;height:18px}
-    .search input{all:unset;flex:1;font-size:1.0625rem}
-    .search input::placeholder{color:#8d889a}
-    .video-count{color:var(--muted);font-size:var(--step-small);margin:0 0 20px}
-    .more-link{margin-top:40px;display:flex;justify-content:center}
+/* socials */
+.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:20px}
+.soc{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;color:var(--ink);text-decoration:none;transition:transform .2s cubic-bezier(.3,1.6,.5,1),color .2s,filter .2s;position:relative;background:transparent;border:0;cursor:pointer}
+.soc svg{width:24px;height:24px}
+.soc:hover{transform:translateY(-4px) scale(1.12);color:var(--b);filter:drop-shadow(0 0 10px var(--b))}
+.soc .tip{position:absolute;top:calc(100% + 4px);left:50%;translate:-50% -4px;white-space:nowrap;font-size:.75rem;padding:3px 8px;border-radius:6px;background:#000;border:1px solid var(--line);opacity:0;pointer-events:none;transition:opacity .15s,translate .15s;z-index:5}
+.soc:hover .tip,.soc:focus-visible .tip{opacity:1;translate:-50% 0}
 
-    /* bento */
-    .bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
-    .tile{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:300px;padding:clamp(22px,2.4vw,32px);border-radius:var(--radius);background:var(--surface);border:1px solid var(--edge);overflow:hidden;transition:background-color .25s}
-    .tile:hover{background:var(--surface-2)}
-    .tile h3{font-size:clamp(1.6rem,1.1rem + 1.4vw,2.4rem)}
-    .tile p{color:var(--muted);margin-top:8px}
-    .tile-index{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-weight:500;font-size:var(--step-small)}
-    .t-game{grid-column:span 6;grid-row:span 2;min-height:420px}
-    .t-game img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;transition:transform .8s var(--ease),opacity .3s}
-    .t-game::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,8,12,.2),rgba(9,8,12,.9))}
-    .t-game:hover img{transform:scale(1.04);opacity:.7}
-    .t-game .tile-foot{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:16px}
-    .t-music,.t-live{grid-column:span 6}
-    .t-music{background:var(--paper);color:var(--paper-ink)}.t-music p,.t-music .tile-index{color:var(--paper-muted)}.t-music:hover{background:#fff}
-    .t-music .eq i{background:var(--accent)}
-    .t-live .twitch-mark{position:absolute;right:-20px;bottom:-30px;width:180px;height:180px;color:var(--twitch);opacity:.18}
-    .arrow{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:var(--radius);background:var(--accent);color:#fff;transition:transform .3s var(--snap)}
-    .arrow svg{width:20px;height:20px}
-    a:hover>.arrow,.tile:hover .arrow{transform:rotate(-8deg) scale(1.06)}
-    .sale-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:4px;background:var(--accent);color:#fff;font-weight:500;font-size:.8125rem}
-    .live-dot{display:inline-flex;align-items:center;gap:8px}
-    .live-dot i{width:8px;height:8px;border-radius:50%;background:#ff4d6d;animation:pulse 2s infinite}
-    @media (max-width:860px){.t-game,.t-music,.t-live{grid-column:1/-1}.t-game{min-height:360px}}
+/* link stack */
+.links{display:grid;gap:8px;margin-top:20px}
+.lk{display:flex;align-items:center;gap:14px;padding:10px 12px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);text-decoration:none;color:var(--ink);transition:background-color .2s,border-color .2s,transform .2s;min-height:64px;text-align:left;width:100%;cursor:pointer}
+.lk:hover{background:rgba(124,58,237,.16);border-color:var(--line);transform:translateY(-2px)}
+.lk .th{flex:none;width:96px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000;position:relative}
+.lk .th.v{width:44px;aspect-ratio:9/16}
+.lk .th img{width:100%;height:100%;object-fit:cover;display:block}
+.lk .ic{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(124,58,237,.2);color:var(--accent-2)}
+.lk .ic svg{width:22px;height:22px}
+.lk .tx{min-width:0;flex:1}
+.lk small{display:block;font-family:"JetBrains Mono",monospace;font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-2)}
+.lk b{display:block;font-weight:500;font-size:.9375rem;line-height:1.3;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.lk .go{flex:none;width:18px;height:18px;color:var(--muted)}
+.lk code{font-family:"JetBrains Mono",monospace;font-weight:500;color:var(--ink);background:rgba(124,58,237,.3);padding:1px 6px;border-radius:5px}
 
-    .cta-band{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-top:clamp(72px,8vw,120px);padding:clamp(28px,4vw,56px);border-radius:var(--radius);background:var(--accent);color:#fff}
-    .cta-band .eyebrow{color:#e4d8ff}
-    .cta-band h2 span{color:#e4d8ff}
-    .cta-band p{margin-top:14px;max-width:40ch;color:#eee7ff}
-    .cta-band .btn-primary{background:#fff;color:var(--accent)}
-    .cta-band .btn-primary:hover{background:var(--bg);color:#fff}
+.foot{margin-top:18px;text-align:center;font-size:.75rem;color:var(--muted);font-family:"JetBrains Mono",monospace;letter-spacing:.04em}
+.toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom));translate:-50% 20px;z-index:60;padding:10px 16px;border-radius:12px;background:#000;border:1px solid var(--line);font-size:.875rem;opacity:0;transition:opacity .2s,translate .2s;pointer-events:none}
+.toast.on{opacity:1;translate:-50% 0}
 
-    /* socials */
-    .socials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-    .social{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:20px 22px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--edge);transition:background-color .2s,transform .3s var(--ease)}
-    .social:hover{background:var(--surface-2)}
-    @media (hover:hover){.social:hover{transform:translateX(4px)}}
-    .social-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:8px;background:var(--brand,var(--accent));color:var(--icon-ink,#fff)}
-    .social-icon svg{width:24px;height:24px}
-    .social-body{display:grid}
-    .social-body small{color:var(--muted);font-size:.8125rem}
-    .social-body b{font-size:var(--step-lead);font-weight:800;letter-spacing:-.02em}
-    .social-body span{color:var(--muted);font-size:var(--step-small)}
-    .social .arrow{background:var(--surface-3)}
-    .social:hover .arrow{background:var(--accent)}
-    @media (max-width:760px){.socials{grid-template-columns:1fr}}
-    .ticket{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:center;padding:clamp(24px,3.4vw,48px);border-radius:var(--radius);background:var(--paper);color:var(--paper-ink)}
-    .ticket .eyebrow{color:var(--accent)}
-    .ticket h3{font-size:clamp(2rem,1.2rem + 2.4vw,3.4rem)}
-    .ticket p{margin-top:14px;color:var(--paper-muted)}
-    .ticket a{text-decoration:underline;text-underline-offset:.2em}
-    .code-box{display:grid;gap:10px;justify-items:start;padding:24px;border-radius:var(--radius);background:var(--paper-ink);color:var(--ink)}
-    .code-box small{color:var(--muted)}
-    .code-box code{font-family:inherit;font-weight:800;font-size:clamp(2.2rem,1.4rem + 2vw,3.2rem);letter-spacing:.02em}
-    .copy-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:0;border-radius:var(--radius);background:var(--accent);color:#fff;font-weight:500;cursor:pointer}
-    .copy-btn svg{width:16px;height:16px}
-    .copy-btn:hover{background:var(--ink);color:var(--bg)}
-    @media (max-width:760px){.ticket{grid-template-columns:1fr}}
+.spark{position:fixed;z-index:40;width:6px;height:6px;border-radius:50%;pointer-events:none;background:var(--accent-2);box-shadow:0 0 10px var(--glow);animation:fade .7s forwards}
+@keyframes fade{to{opacity:0;transform:translateY(14px) scale(.2)}}
 
-    /* live */
-    .live-frame{border-radius:10px;background:var(--surface);border:1px solid var(--edge);overflow:hidden}
-    .livebar{display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1px solid var(--edge);color:var(--muted);font-size:var(--step-small)}
-    .livebar .dots{display:flex;gap:6px}.livebar .dots i{width:10px;height:10px;border-radius:50%;background:var(--surface-3)}
-    .live-status{margin-left:auto;padding:3px 10px;border-radius:4px;background:var(--surface-2);font-weight:500}
-    .live-status.is-live{background:#ff4d6d;color:#fff}
-    .player{min-height:280px;background:#000}
-    .player iframe{display:block;width:100%;border:0}
-    .liveinfo{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:22px 24px}
-    .liveinfo strong{font-size:var(--step-lead);font-weight:800;letter-spacing:-.02em}
-    .liveinfo p{color:var(--muted);margin-top:4px}
-
-    .contact-card{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding:clamp(24px,3.4vw,48px);border-radius:var(--radius);background:var(--surface);border:1px solid var(--edge)}
-    .contact-card h3{font-size:clamp(1.8rem,1.2rem + 1.8vw,2.8rem)}
-    .contact-card p{color:var(--muted);margin-top:12px;max-width:52ch}
-    .discord-pill{display:inline-flex;align-items:center;gap:12px;margin-top:20px;padding:8px 8px 8px 16px;border-radius:var(--radius);background:var(--bg)}
-    .discord-pill>svg{width:22px;height:22px;color:var(--discord)}
-    .discord-pill code{font-family:inherit;font-weight:800;font-size:1.25rem}
-    .hint{font-size:var(--step-small)}
-
-    /* footer */
-    .footer{background:var(--paper);color:var(--paper-ink);padding-top:clamp(56px,6vw,96px)}
-    .footer-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-    .footer .brand small{color:var(--paper-muted)}
-    .footer-top p{color:var(--paper-muted);margin-top:8px}
-    .footer-links{display:flex;flex-wrap:wrap;gap:4px 24px}
-    .footer-links a{min-height:44px;display:inline-flex;align-items:center;color:var(--paper-muted);font-weight:500}
-    .footer-links a:hover{color:var(--paper-ink);text-decoration:underline}
-    .footer-word{margin-top:clamp(56px,10vw,160px);font-weight:800;letter-spacing:-.06em;line-height:.8;font-size:clamp(4rem,19vw,17rem);text-align:center;white-space:nowrap;overflow:hidden}
-    .footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0 18px;color:var(--paper-muted);font-size:var(--step-small)}
-    .footer-bottom a{min-height:44px;display:inline-flex;align-items:center}
-
-    /* video dialog + toast */
-    #video-dialog{width:min(1100px,94vw);padding:0;border:1px solid var(--edge);border-radius:10px;background:var(--surface);color:var(--ink)}
-    #video-dialog::backdrop{background:rgba(5,4,8,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-    .video-dialog-head,.video-dialog-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px}
-    .video-dialog-head h2{font-size:var(--step-lead);letter-spacing:-.02em;line-height:1.25}
-    .video-dialog-foot p{color:var(--muted);font-size:var(--step-small)}
-    .close-btn{display:grid;place-items:center;flex:none;width:44px;height:44px;border:0;border-radius:var(--radius);background:var(--surface-2);cursor:pointer}
-    .close-btn:hover{background:var(--surface-3)}
-    .close-btn svg{width:20px;height:20px}
-    #youtube-player{aspect-ratio:16/9;background:#000}
-    #youtube-player iframe{width:100%;height:100%;border:0;display:block}
-    .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;transform:translate(-50%,20px);padding:12px 18px;border-radius:var(--radius);background:var(--paper);color:var(--paper-ink);font-weight:500;opacity:0;pointer-events:none;transition:opacity .25s,transform .35s var(--snap)}
-    .toast.show{opacity:1;transform:translate(-50%,0)}
-
-    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--d,0) * 80ms)}
-    .reveal.in{opacity:1;transform:none}
-
-    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
-    @media (prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-      .reveal,.fade-up{opacity:1;transform:none}.hero h1 .line>span{transform:none}
-    }
-  /* cookie banner */
-.ck{position:fixed;z-index:70;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));max-width:520px;max-height:calc(100dvh - 32px);overflow:auto;padding:20px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:calc(var(--radius) + 4px);box-shadow:0 18px 50px rgba(0,0,0,.45)}
-.ck[hidden]{display:none}
-.ck:focus{outline:none}
-.ck h2{margin:0;font-size:1.125rem;font-weight:800;letter-spacing:-.01em;line-height:1.3}
-.ck p,.ck li{font-size:var(--step-small);color:var(--muted);line-height:1.5}
-.ck p{margin:6px 0 0}
-.ck ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
-.ck li b{color:var(--ink);font-weight:500}
-.ck-acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
-.ck-btn{all:unset;box-sizing:border-box;min-height:44px;padding:0 12px;display:grid;place-items:center;text-align:center;line-height:1.2;border-radius:var(--radius);background:var(--surface-2);color:var(--ink);font-weight:500;font-size:var(--step-small);cursor:pointer;transition:background-color .2s}
-.ck-btn:hover{background:var(--surface-3)}
-.ck-btn:focus-visible,.ck-link:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}
-.ck-btn[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--accent)}
-.ck-link{all:unset;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;color:inherit;text-decoration:underline;text-underline-offset:3px}
-@media (max-width:420px){.ck-acts{grid-template-columns:1fr}}
-.ck-gate{display:grid;place-content:center;justify-items:center;gap:14px;height:100%;min-height:260px;padding:24px;text-align:center;background:var(--surface);color:var(--muted);font-size:var(--step-small)}
-.ck-gate p{max-width:40ch;line-height:1.5}
+@media (max-width:420px){.card{padding:24px 16px 18px;border-radius:20px}.lk .th{width:80px}.socials{gap:4px}.soc{width:40px;height:40px}.soc svg{width:22px;height:22px}}
+@media (max-width:360px){.card{padding-inline:12px}.socials{gap:2px}.soc{width:35px;height:40px}.soc svg{width:20px;height:20px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.card{opacity:1;translate:none}}
 </style>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="aura" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="grid-lines" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81M9.55 15.57V8.43L15.82 12z"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03a10.4 10.4 0 0 1-5.82-1.9c-.01 2.92.01 5.84-.02 8.75a7.6 7.6 0 0 1-1.35 3.94 7.4 7.4 0 0 1-5.91 3.21 7.3 7.3 0 0 1-4.08-1.03A7.6 7.6 0 0 1 1.6 17.25c-.02-.5-.03-1-.01-1.49a7.5 7.5 0 0 1 2.58-4.96 7.4 7.4 0 0 1 6.15-1.72c.02 1.48-.04 2.96-.04 4.44a3.4 3.4 0 0 0-3.02.37 3.4 3.4 0 0 0-1.36 1.75c-.21.51-.15 1.07-.14 1.61a3.4 3.4 0 0 0 3.5 2.87 3.4 3.4 0 0 0 2.77-1.61c.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0m0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8m6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88"/></symbol>
+  <symbol id="i-twitch" viewBox="0 0 24 24"><path fill="currentColor" d="M11.57 4.71h1.72v5.15h-1.72zm4.72 0H18v5.15h-1.71zM6 0 1.71 4.29v15.42h5.15V24l4.28-4.29h3.43L22.29 12V0zm14.57 11.14-3.43 3.43h-3.43l-3 3v-3H6.86V1.71h13.71Z"/></symbol>
+  <symbol id="i-snap" viewBox="0 0 24 24"><path fill="currentColor" d="M12.21.79c.99 0 4.35.28 5.93 3.82.53 1.2.4 3.22.3 4.85l-.03.57c.07.05.2.09.4.09.3-.02.66-.12 1.03-.3.17-.08.35-.1.47-.1.18 0 .36.03.5.09.46.15.74.48.74.84q.02.67-1.21 1.17l-.35.12c-.45.13-1.14.36-1.33.81-.09.22-.06.52.12.87l.02.01c.06.14 1.52 3.48 4.79 4.02.25.04.43.27.42.51a.6.6 0 0 1-.05.22c-.24.57-1.27.99-3.14 1.27-.06.09-.12.38-.17.57l-.13.55c-.08.27-.27.41-.56.41h-.03a3 3 0 0 1-.54-.08 6 6 0 0 0-1.27-.13c-.3 0-.6.01-.91.07-.6.1-1.12.47-1.72.89-.86.6-1.83 1.29-3.3 1.29h-.33c-1.47 0-2.43-.68-3.28-1.29-.6-.42-1.11-.78-1.71-.89a7 7 0 0 0-.93-.07c-.54 0-.96.09-1.27.15a3 3 0 0 1-.54.07c-.37 0-.52-.22-.58-.42l-.14-.57c-.04-.18-.1-.49-.16-.57-1.92-.22-2.95-.64-3.19-1.23a.6.6 0 0 1-.06-.22.5.5 0 0 1 .42-.51c3.27-.54 4.73-3.88 4.79-4.02l.02-.03c.18-.35.22-.65.12-.87-.2-.43-.89-.66-1.33-.81l-.35-.12c-1.1-.43-1.26-.93-1.2-1.27.09-.48.68-.8 1.17-.8.15 0 .27.03.38.08.42.19.79.3 1.1.3.24 0 .39-.06.47-.1l-.05-.57c-.1-1.63-.22-3.65.31-4.84C7.39 1.08 10.74.81 11.73.81z"/></symbol>
+  <symbol id="i-spot" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24m5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02m1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6s.12-1.02.6-1.14c4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2m.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3"/></symbol>
+  <symbol id="i-dc" viewBox="0 0 24 24"><path fill="currentColor" d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.44.87-.61 1.25a18.3 18.3 0 0 0-5.49 0 13 13 0 0 0-.62-1.25.08.08 0 0 0-.08-.04 19.7 19.7 0 0 0-4.88 1.52.1.1 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 5.99 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.23-1.99a.08.08 0 0 0-.04-.11 13 13 0 0 1-1.87-.89.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.06 0a.07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13 12 12 0 0 1-1.87.89.08.08 0 0 0-.04.11c.36.7.77 1.36 1.22 1.99a.08.08 0 0 0 .09.03 19.8 19.8 0 0 0 6-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03M8.02 15.33c-1.18 0-2.16-1.09-2.16-2.42s.96-2.42 2.16-2.42c1.21 0 2.18 1.1 2.16 2.42 0 1.33-.96 2.42-2.16 2.42m7.97 0c-1.18 0-2.15-1.09-2.15-2.42s.95-2.42 2.15-2.42c1.21 0 2.18 1.1 2.16 2.42 0 1.33-.95 2.42-2.16 2.42"/></symbol>
+  <symbol id="i-arr" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="4" width="19" height="16" rx="3"/><path d="M2.5 9h19M6 6.5h.01M9 6.5h.01"/></g></symbol>
+  <symbol id="b-trophy" viewBox="0 0 24 24"><path fill="currentColor" d="M7 3h10v2h3a1 1 0 0 1 1 1v2a5 5 0 0 1-4.6 5A5 5 0 0 1 13 15.9V19h3v2H8v-2h3v-3.1A5 5 0 0 1 7.6 13 5 5 0 0 1 3 8V6a1 1 0 0 1 1-1h3zm10 4v4a3 3 0 0 0 2-3V7zM7 7H5v1a3 3 0 0 0 2 3z"/></symbol>
+  <symbol id="b-moto" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 10h5l3 6.5M14 10l-1-3h3"/></g></symbol>
+  <symbol id="b-cam" viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h11a2 2 0 0 1 2 2v2.5l4-2.5v10l-4-2.5V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="b-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+  <symbol id="b-brick" viewBox="0 0 24 24"><path fill="currentColor" d="M5 6h4V4h2v2h2V4h2v2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2"/></symbol>
+</svg>
 
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
-    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></symbol>
-    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></g></symbol>
-    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></g></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
-    <symbol id="i-tag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9-9-9Z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/></g></symbol>
-    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z"/></symbol>
-    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02c.08 1.53.63 3.09 1.75 4.17c1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97c-.57-.26-1.1-.59-1.62-.93c-.01 2.92.01 5.84-.02 8.75c-.08 1.4-.54 2.790-1.35 3.94c-1.31 1.92-3.58 3.17-5.91 3.21c-1.43.08-2.86-.31-4.080-1.03c-2.02-1.19-3.44-3.37-3.65-5.71c-.02-.5-.03-1-.01-1.49c.18-1.9 1.12-3.72 2.58-4.96c1.66-1.44 3.98-2.13 6.15-1.72c.02 1.48-.04 2.96-.04 4.44c-.99-.32-2.15-.23-3.02.37c-.63.41-1.110 1.04-1.36 1.75c-.21.51-.15 1.07-.14 1.61c.24 1.64 1.82 3.020 3.5 2.87c1.12-.01 2.19-.66 2.77-1.61c.19-.33.4-.67.41-1.06c.1-1.79.06-3.57.07-5.36c.01-4.03-.01-8.05.02-12.07"/></symbol>
-    <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M7.03.084c-1.277.06-2.149.264-2.91.563a5.9 5.9 0 0 0-2.124 1.388a5.9 5.9 0 0 0-1.38 2.127C.321 4.926.12 5.8.064 7.076s-.069 1.688-.063 4.947s.021 3.667.083 4.947c.061 1.277.264 2.149.563 2.911c.308.789.72 1.457 1.388 2.123a5.9 5.9 0 0 0 2.129 1.38c.763.295 1.636.496 2.913.552c1.278.056 1.689.069 4.947.063s3.668-.021 4.947-.082c1.28-.06 2.147-.265 2.91-.563a5.9 5.9 0 0 0 2.123-1.388a5.9 5.9 0 0 0 1.38-2.129c.295-.763.496-1.636.551-2.912c.056-1.28.07-1.69.063-4.948c-.006-3.258-.02-3.667-.081-4.947c-.06-1.28-.264-2.148-.564-2.911a5.9 5.9 0 0 0-1.387-2.123a5.9 5.9 0 0 0-2.128-1.38c-.764-.294-1.636-.496-2.914-.55C15.647.009 15.236-.006 11.977 0S8.31.021 7.03.084m.14 21.693c-1.17-.05-1.805-.245-2.228-.408a3.7 3.7 0 0 1-1.382-.895a3.7 3.7 0 0 1-.9-1.378c-.165-.423-.363-1.058-.417-2.228c-.06-1.264-.072-1.644-.08-4.848c-.006-3.204.006-3.583.061-4.848c.05-1.169.246-1.805.408-2.228c.216-.561.477-.96.895-1.382a3.7 3.7 0 0 1 1.379-.9c.423-.165 1.057-.361 2.227-.417c1.265-.06 1.644-.072 4.848-.08c3.203-.006 3.583.006 4.85.062c1.168.05 1.804.244 2.227.408c.56.216.96.475 1.382.895s.681.817.9 1.378c.165.422.362 1.056.417 2.227c.06 1.265.074 1.645.08 4.848c.005 3.203-.006 3.583-.061 4.848c-.051 1.17-.245 1.805-.408 2.23c-.216.56-.477.96-.896 1.38a3.7 3.7 0 0 1-1.378.9c-.422.165-1.058.362-2.226.418c-1.266.06-1.645.072-4.85.079s-3.582-.006-4.848-.06m9.783-16.192a1.44 1.44 0 1 0 1.437-1.442a1.44 1.44 0 0 0-1.437 1.442M5.839 12.012a6.161 6.161 0 1 0 12.323-.024a6.162 6.162 0 0 0-12.323.024M8 12.008A4 4 0 1 1 12.008 16A4 4 0 0 1 8 12.008"/></symbol>
-    <symbol id="i-twitch" viewBox="0 0 24 24"><path fill="currentColor" d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></symbol>
-    <symbol id="i-snapchat" viewBox="0 0 24 24"><path fill="currentColor" d="M12.206.793c.99 0 4.347.276 5.93 3.821c.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51c.075.045.203.09.401.09c.3-.016.659-.12 1.033-.301a1 1 0 0 1 .464-.104c.182 0 .359.029.509.09c.45.149.734.479.734.838q.022.674-1.213 1.168c-.089.029-.209.075-.344.119c-.45.135-1.139.36-1.333.81c-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014c.255.044.435.27.42.509a.6.6 0 0 1-.045.225c-.24.569-1.273.988-3.146 1.271c-.059.091-.12.375-.164.57c-.029.179-.074.36-.134.553c-.076.271-.27.405-.555.405h-.03a3 3 0 0 1-.538-.074a6 6 0 0 0-1.273-.135c-.3 0-.599.015-.913.074c-.6.104-1.123.464-1.723.884c-.853.599-1.826 1.288-3.294 1.288c-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288c-.599-.42-1.107-.779-1.707-.884a7 7 0 0 0-.928-.074c-.54 0-.958.089-1.272.149a3 3 0 0 1-.54.074c-.374 0-.523-.224-.583-.42c-.061-.192-.09-.389-.135-.567c-.046-.181-.105-.494-.166-.57c-1.918-.222-2.95-.642-3.189-1.226a.6.6 0 0 1-.055-.225a.496.496 0 0 1 .42-.509c3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869c-.195-.434-.884-.658-1.332-.809a2 2 0 0 1-.346-.119c-1.107-.435-1.257-.93-1.197-1.273c.09-.479.674-.793 1.168-.793c.146 0 .27.029.383.074c.42.194.789.3 1.104.3c.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"/></symbol>
-    <symbol id="i-spotify" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12s12-5.4 12-12S18.66 0 12 0m5.521 17.34c-.24.359-.66.48-1.021.24c-2.82-1.74-6.36-2.101-10.561-1.141c-.418.122-.779-.179-.899-.539c-.12-.421.18-.78.54-.9c4.56-1.021 8.52-.6 11.640 1.32c.42.18.479.659.301 1.02m1.44-3.3c-.301.42-.841.6-1.262.3c-3.239-1.98-8.159-2.58-11.939-1.38c-.479.12-1.02-.12-1.14-.6s.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2m.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721c-.18-.601.18-1.2.72-1.381c4.26-1.26 11.28-1.02 15.721 1.621c.539.3.719 1.020.419 1.56c-.299.421-1.020.599-1.559.3"/></symbol>
-    <symbol id="i-discord" viewBox="0 0 24 24"><path fill="currentColor" d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.3 18.3 0 0 0-5.487 0a13 13 0 0 0-.617-1.25a.08.08 0 0 0-.079-.037A19.7 19.7 0 0 0 3.677 4.37a.1.1 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.08.08 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.08.08 0 0 0 .084-.028a14 14 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13 13 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10 10 0 0 0 .372-.292a.07.07 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.07.07 0 0 1 .078.01q.181.149.373.292a.077.077 0 0 1-.006.127a12.3 12.3 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.08.08 0 0 0 .084.028a19.8 19.8 0 0 0 6.002-3.03a.08.08 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.03M8.02 15.33c-1.182 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418m7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418"/></symbol>
-  </svg>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
 
-  <header class="nav" id="nav">
-    <a class="brand" href="#home" aria-label="Nshinji Media home"><span class="brand-mark" aria-hidden="true">N</span>Nshinji <small>Media</small></a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#home" data-tab-link="home">Home</a>
-      <a href="#videos" data-tab-link="videos">Videos</a>
-      <a href="#shorts" data-tab-link="shorts">Shorts</a>
-      <a href="#live" data-tab-link="live">Live</a>
-      <a href="#links" data-tab-link="links">Socials</a>
-    </nav>
-    <a class="nav-cta" href="https://www.youtube.com/@nshinjiiii?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe</a>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
-  </header>
+<div class="gate" id="gate" role="button" tabindex="0" aria-label="Click to enter"><div><p>click to enter</p><small>nshinjimedia.co.uk</small></div></div>
 
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <nav aria-label="Mobile navigation">
-      <a href="#home" data-tab-link="home"><small>01</small>Home</a>
-      <a href="#videos" data-tab-link="videos"><small>02</small>Videos</a>
-      <a href="#shorts" data-tab-link="shorts"><small>03</small>Shorts</a>
-      <a href="#live" data-tab-link="live"><small>04</small>Live</a>
-      <a href="#links" data-tab-link="links"><small>05</small>Socials</a>
-    </nav>
-    <div class="menu-foot"><span>YouTube: @nshinjiiii</span><span>nshinjimedia.co.uk</span></div>
-  </div>
-
-  <main id="main-content" tabindex="-1">
-
-    <!-- HOME -->
-    <section class="tab-panel hero" id="home" data-tab="home" aria-labelledby="home-heading">
-      <div class="wrap">
-        <div class="hero-grid feature-grid">
-          <div>
-            <span class="status fade-up" style="animation-delay:.05s"><span class="pulse" aria-hidden="true"></span>New on the channel</span>
-            <h1 id="home-heading"><span class="line"><span>Nshinji</span></span><span class="line"><span><span class="glow">Media.</span></span></span></h1>
-            <p class="hero-copy fade-up" style="animation-delay:.45s"><strong class="hero-title" id="hero-caption">How To Play OG Fortnite Chapter 2 Season 2 in 2026</strong><span id="hero-meta">My latest upload on YouTube.</span></p>
-            <div class="hero-actions fade-up" style="animation-delay:.6s">
-              <button type="button" class="btn btn-primary" id="hero-watch" data-video="WnypGtR4fjg">Watch now <svg aria-hidden="true"><use href="#i-play"/></svg></button>
-              <a class="btn" href="https://www.youtube.com/@nshinjiiii?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" style="color:#ff0033"><use href="#i-youtube"/></svg>Subscribe</a>
-            </div>
-          </div>
-          <div class="fade-up" style="animation-delay:.35s">
-            <button type="button" class="feature-player" id="hero-player" data-video="WnypGtR4fjg" aria-label="Play my latest upload">
-              <img id="hero-thumb" src="https://img.youtube.com/vi/WnypGtR4fjg/maxresdefault.jpg" alt="" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
-              <span class="tag lime">Latest upload</span>
-              <span class="play-btn" aria-hidden="true"><svg><use href="#i-play"/></svg></span>
-              <span class="feature-bar" aria-hidden="true"><span>YouTube / @nshinjiiii</span><span class="eq"><i></i><i></i><i></i><i></i></span></span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="wrap">
-        <div class="wall fade-up" style="animation-delay:.7s">
-          <div class="bricks" aria-label="N-S-H-I-N-J-I. Tap a brick.">
-            <button class="brick" type="button" aria-label="Brick N">N</button><button class="brick" type="button" aria-label="Brick S">S</button><button class="brick" type="button" aria-label="Brick H">H</button><button class="brick" type="button" aria-label="Brick I">I</button><button class="brick" type="button" aria-label="Brick N">N</button><button class="brick" type="button" aria-label="Brick J">J</button><button class="brick" type="button" aria-label="Brick I">I</button>
-          </div>
-          <div class="wall-foot"><span>Tap a brick</span><span>Gaming · Videos · Shorts · Live · Music · Roblox</span></div>
-        </div>
-      </div>
-
-      <div class="wrap">
-        <div id="home-videos-block">
-          <div class="section-intro">
-            <div><span class="eyebrow">YouTube</span><h2>More videos.</h2></div>
-            <a class="btn" href="#videos">All videos <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </div>
-          <div id="home-videos" class="video-grid"></div>
-        </div>
-
-        <div id="home-shorts-block">
-          <div class="section-intro">
-            <div><span class="eyebrow">YouTube Shorts</span><h2>Shorts.</h2></div>
-            <a class="btn" href="#shorts">All Shorts <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </div>
-          <div id="home-shorts" class="video-grid shorts-grid"></div>
-        </div>
-
-        <div class="section-intro">
-          <div class="reveal"><span class="eyebrow">More from Nshinji</span><h2>Streams<br>and music.</h2></div>
-          <p class="reveal" style="--d:1">Catch me live on Twitch or listen to my music on Spotify.</p>
-        </div>
-
-        <div class="bento">
-
-          <a class="tile t-music reveal" style="--d:1" href="https://open.spotify.com/artist/4XIPH29Bi4h2lUNxOZJpZv" target="_blank" rel="noopener noreferrer">
-            <span class="tile-index"><span>Spotify</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span>
-            <div><h3>A different frequency.</h3><p>Find my music on Spotify.</p></div>
-          </a>
-
-          <a class="tile t-live reveal" style="--d:2" href="#live">
-            <span class="tile-index"><span>Twitch</span><span class="live-dot"><i></i>Live</span></span>
-            <svg class="twitch-mark" aria-hidden="true"><use href="#i-twitch"/></svg>
-            <div><h3>Catch the stream.</h3><p>Watch live or join the chat on Twitch.</p></div>
-          </a>
-        </div>
-
-        <div class="cta-band reveal">
-          <div><span class="eyebrow">Don't miss the next upload</span><h2 style="margin-top:18px">Subscribe and <span>follow along.</span></h2><p>New videos and Shorts on YouTube, and live streams on Twitch.</p></div>
-          <a class="btn btn-primary" href="https://www.youtube.com/@nshinjiiii?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Subscribe on YouTube <svg aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOCIALS -->
-    <section class="tab-panel" data-tab="links" id="links" aria-labelledby="findme">
-      <div class="wrap">
-        <div class="page-head">
-          <div><span class="eyebrow">All links</span><h2 id="findme">Find me online<span class="dot">.</span></h2></div>
-          <p>Videos, streams, music and behind-the-scenes. Follow along wherever you hang out.</p>
-        </div>
-        <div class="socials">
-          <a class="social reveal" style="--brand:#ff0033" href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener noreferrer"><span class="social-icon"><svg aria-hidden="true"><use href="#i-youtube"/></svg></span><span class="social-body"><small>Gaming & videos</small><b>YouTube</b><span>@nshinjiiii</span></span><span class="arrow"><svg aria-hidden="true"><use href="#i-arrow-up"/></svg></span></a>
-          <a class="social reveal" style="--brand:#25f4ee;--icon-ink:#000;--d:1" href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener noreferrer"><span class="social-icon"><svg aria-hidden="true"><use href="#i-tiktok"/></svg></span><span class="social-body"><small>Follow the journey</small><b>TikTok</b><span>@nshinjii</span></span><span class="arrow"><svg aria-hidden="true"><use href="#i-arrow-up"/></svg></span></a>
-          <a class="social reveal" style="--brand:#ff3d8b;--d:2" href="https://www.instagram.com/colexwhynot" target="_blank" rel="noopener noreferrer"><span class="social-icon"><svg aria-hidden="true"><use href="#i-instagram"/></svg></span><span class="social-body"><small>Follow the journey</small><b>Instagram</b><span>@colexwhynot</span></span><span class="arrow"><svg aria-hidden="true"><use href="#i-arrow-up"/></svg></span></a>
-          <a class="social reveal" style="--brand:#9146ff" href="https://www.twitch.tv/nshinjii" target="_blank" rel="noopener noreferrer"><span class="social-icon"><svg aria-hidden="true"><use href="#i-twitch"/></svg></span><span class="social-body"><small>Live streams</small><b>Twitch</b><span>@nshinjii</span></span><span class="arrow"><svg aria-hidden="true"><use href="#i-arrow-up"/></svg></span></a>
-          <a class="social reveal" style="--brand:#fffc00;--icon-ink:#000;--d:1" href="https://www.snapchat.com/add/akenpachhhi" target="_blank" rel="noopener noreferrer"><span class="social-icon"><svg aria-hidden="true"><use href="#i-snapchat"/></svg></span><span class="social-body"><small>Music & more</small><b>Snapchat</b><span>@akenpachhhi</span></span><span class="arrow"><svg aria-hidden="true"><use href="#i-arrow-up"/></svg></span></a>
-          <a class="social reveal" style="--brand:#1ed760;--icon-ink:#000" href="https://open.spotify.com/artist/4XIPH29Bi4h2lUNxOZJpZv" target="_blank" rel="noopener noreferrer"><span class="social-icon"><svg aria-hidden="true"><use href="#i-spotify"/></svg></span><span class="social-body"><small>Listen to my music</small><b>Spotify</b><span>nshinji</span></span><span class="arrow"><svg aria-hidden="true"><use href="#i-arrow-up"/></svg></span></a>
-        </div>
-        <div class="ticket reveal" style="margin-top:28px">
-          <div>
-            <span class="eyebrow">Dubby.gg / Partner code</span>
-            <h3>10% off<br>at Dubby.</h3>
-            <p>Use my code at checkout on <a href="https://www.dubby.gg/" target="_blank" rel="noopener noreferrer">dubby.gg</a> to save 10% on your order.</p>
-          </div>
-          <div class="code-box"><small>Your code</small><code>NSHINJI</code><button class="copy-btn" id="copy" data-copy="NSHINJI" data-copy-msg="NSHINJI copied"><svg aria-hidden="true"><use href="#i-copy"/></svg>Copy code</button></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIDEOS -->
-    <section class="tab-panel" data-tab="videos" id="videos" aria-labelledby="videos-heading">
-      <div class="wrap">
-        <div class="page-head">
-          <div><span class="eyebrow">YouTube</span><h2 id="videos-heading">Latest videos<span class="dot">.</span></h2></div>
-          <p>Gaming, tutorials and everything in between — fresh from the channel.</p>
-        </div>
-        <div class="channel-bar">
-          <a class="channel" href="https://www.youtube.com/@nshinjiiii/videos" target="_blank" rel="noopener noreferrer"><span class="channel-avatar"><svg aria-hidden="true"><use href="#i-youtube"/></svg></span><span><b>@nshinjiiii</b><span>View the channel ↗</span></span></a>
-          <label class="search"><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search videos</span><svg aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="video-search" placeholder="Search my uploads…"></label>
-        </div>
-        <p id="video-count" class="video-count" role="status"></p>
-        <div id="video-grid" class="video-grid"></div>
-        <div class="more-link"><a class="btn" href="https://www.youtube.com/@nshinjiiii/videos" target="_blank" rel="noopener noreferrer">See more on YouTube <svg aria-hidden="true"><use href="#i-arrow-up"/></svg></a></div>
-      </div>
-    </section>
-
-    <!-- SHORTS -->
-    <section class="tab-panel" data-tab="shorts" id="shorts" aria-labelledby="shorts-heading">
-      <div class="wrap">
-        <div class="page-head">
-          <div><span class="eyebrow">YouTube</span><h2 id="shorts-heading">Shorts<span class="dot">.</span></h2></div>
-          <p>Quick hits, glitches and reactions. Tap any short to watch it here.</p>
-        </div>
-        <div class="channel-bar">
-          <a class="channel" href="https://www.youtube.com/@nshinjiiii/shorts" target="_blank" rel="noopener noreferrer"><span class="channel-avatar"><svg aria-hidden="true"><use href="#i-youtube"/></svg></span><span><b>@nshinjiiii</b><span>All Shorts ↗</span></span></a>
-          <label class="search"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search Shorts</span><svg aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="shorts-search" placeholder="Search my Shorts…"></label>
-        </div>
-        <p id="shorts-count" class="video-count" role="status"></p>
-        <div id="shorts-grid" class="video-grid shorts-grid"></div>
-      </div>
-    </section>
-
-    <!-- LIVE -->
-    <section class="tab-panel" data-tab="live" id="live" aria-labelledby="live-heading">
-      <div class="wrap">
-        <div class="page-head">
-          <div><span class="eyebrow">Twitch</span><h2 id="live-heading">Watch live<span class="dot">.</span></h2></div>
-          <p>When I'm streaming, it shows up right here. Pull up a chair.</p>
-        </div>
-        <div class="live-frame">
-          <div class="live-inner">
-            <div class="livebar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>twitch.tv/nshinjii</span><span class="live-status" id="live-status" aria-live="polite">◌ Checking stream</span></div>
-            <div id="twitch-player" class="player" aria-label="Twitch stream player"></div>
-            <div class="liveinfo"><div><strong id="live-title">Checking Twitch status</strong><p id="live-copy">The stream appears here when Twitch makes it available.</p></div><a class="btn btn-twitch" href="https://www.twitch.tv/nshinjii" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" style="transform:none"><use href="#i-twitch"/></svg>Join on Twitch</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-top">
-        <div><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">N</span>Nshinji <small>Media</small></a><p>Gaming, music and streams from Cole.</p></div>
-        <nav class="footer-links" aria-label="Footer">
-          <a href="#videos">Videos</a><a href="#shorts">Shorts</a><a href="#live">Live</a><a href="#links">Socials</a>
-        </nav>
-      </div>
-      <div class="footer-word" aria-hidden="true">NSHINJI</div>
-      <div class="footer-bottom"><span>© <span id="year">2026</span> Nshinji Media</span><span>music / gaming / creating</span><button class="ck-link" type="button" data-ck-open>Cookie settings</button><a href="#home">Back to top ↑</a></div>
+<main class="stage">
+  <article class="card" id="card" aria-labelledby="name">
+    <div class="head">
+      <div class="avatar" aria-hidden="true"><span class="ring"></span><svg viewBox="0 0 64 64"><path d="M15 54V12h9l16 25V12h9v42h-9L24 29v25z" fill="#fff"/></svg></div>
+      <h1 class="bricks" id="name" aria-label="nshinji"><span style="--i:0">N</span><span style="--i:1">S</span><span style="--i:2">H</span><span style="--i:3">I</span><span style="--i:4">N</span><span style="--i:5">J</span><span style="--i:6">I</span></h1>
+      <p class="handle">@nshinjiiii</p>
+      <ul class="badges" aria-label="Badges" style="list-style:none;padding:0">
+        <li class="badge" tabindex="0"><svg aria-hidden="true"><use href="#b-trophy"/></svg><span class="tip">Top 250 · Warzone Ranked 2025</span></li>
+        <li class="badge" tabindex="0"><svg aria-hidden="true"><use href="#b-moto"/></svg><span class="tip">Former Top 14 · Trials Rising</span></li>
+        <li class="badge" tabindex="0"><svg aria-hidden="true"><use href="#b-cam"/></svg><span class="tip">Content creator · 100k+ views</span></li>
+        <li class="badge" tabindex="0"><svg aria-hidden="true"><use href="#b-brick"/></svg><span class="tip">Roblox developer</span></li>
+        <li class="badge" tabindex="0"><svg aria-hidden="true"><use href="#b-code"/></svg><span class="tip">Web developer</span></li>
+      </ul>
+      <p class="typed" aria-live="off"><span id="typed"></span><span class="cur" aria-hidden="true"></span></p>
+      <p class="sr">Gaming, music and streams. OG Fortnite, Roblox and Blox Fruits videos.</p>
+      <div class="meta"><span><svg aria-hidden="true"><use href="#i-pin"/></svg>Wales, UK</span><span id="views-wrap" hidden><svg aria-hidden="true"><use href="#i-eye"/></svg><b id="views" style="font-weight:500">0</b> views</span></div>
     </div>
-  </footer>
 
-  <dialog id="video-dialog" aria-labelledby="video-title">
-    <div class="video-dialog-head"><h2 id="video-title"></h2><button class="close-btn" id="close-video" aria-label="Close video"><svg aria-hidden="true"><use href="#i-close"/></svg></button></div>
-    <div id="youtube-player"></div>
-    <div class="video-dialog-foot"><p>If playback is unavailable here, watch directly on YouTube.</p><a id="video-youtube" class="btn btn-sm btn-light" target="_blank" rel="noopener noreferrer">Watch on YouTube <svg aria-hidden="true"><use href="#i-arrow-up"/></svg></a></div>
-  </dialog>
-  <div class="toast" id="toast" role="status"></div>
+    <nav class="socials" aria-label="Socials">
+      <a class="soc" style="--b:#ff0033" href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg><span class="tip">YouTube</span></a>
+      <a class="soc" style="--b:#25f4ee" href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tt"/></svg><span class="tip">TikTok</span></a>
+      <a class="soc" style="--b:#ff3d8b" href="https://www.instagram.com/colexwhynot" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg><span class="tip">Instagram</span></a>
+      <a class="soc" style="--b:#9146ff" href="https://www.twitch.tv/nshinjii" target="_blank" rel="noopener" aria-label="Twitch"><svg aria-hidden="true"><use href="#i-twitch"/></svg><span class="tip">Twitch</span></a>
+      <a class="soc" style="--b:#1ed760" href="https://open.spotify.com/artist/4XIPH29Bi4h2lUNxOZJpZv" target="_blank" rel="noopener" aria-label="Spotify"><svg aria-hidden="true"><use href="#i-spot"/></svg><span class="tip">Spotify</span></a>
+      <a class="soc" style="--b:#fffc00" href="https://www.snapchat.com/add/akenpachhhi" target="_blank" rel="noopener" aria-label="Snapchat"><svg aria-hidden="true"><use href="#i-snap"/></svg><span class="tip">Snapchat</span></a>
+      <button class="soc" style="--b:#5865f2" type="button" data-copy="e9vg" data-msg="Discord username e9vg copied" aria-label="Copy Discord username e9vg"><svg aria-hidden="true"><use href="#i-dc"/></svg><span class="tip">Discord: e9vg</span></button>
+    </nav>
 
-  <noscript><style>.reveal,.fade-up{opacity:1!important;transform:none!important}.hero h1 .line>span{transform:none!important}</style></noscript>
-
-  <section class="ck" id="ck" hidden tabindex="-1" aria-labelledby="ck-h">
-    <h2 id="ck-h">Cookies on this site</h2>
-    <p>Pick what this site may save in your browser. You can change it any time from Cookie settings at the bottom of the page.</p>
-    <ul>
-      <li><b>Required:</b> remembers your cookie choice.</li>
-      <li><b>Optional:</b> the YouTube and Twitch players, which set their own cookies. Without them you can still watch on YouTube and Twitch.</li>
-    </ul>
-    <div class="ck-acts">
-      <button class="ck-btn" type="button" data-ck="all">Accept all</button>
-      <button class="ck-btn" type="button" data-ck="required">Required only</button>
-      <button class="ck-btn" type="button" data-ck="none">Reject all</button>
+    <div class="links">
+      <a class="lk" id="lk-video" href="https://www.youtube.com/@nshinjiiii/videos" target="_blank" rel="noopener">
+        <span class="th"><img id="v-thumb" alt="" loading="lazy" decoding="async"></span>
+        <span class="tx"><small>Latest video</small><b id="v-title">Watch on YouTube</b></span>
+        <svg class="go" aria-hidden="true"><use href="#i-arr"/></svg>
+      </a>
+      <a class="lk" id="lk-short" href="https://www.youtube.com/@nshinjiiii/shorts" target="_blank" rel="noopener">
+        <span class="th v"><img id="s-thumb" alt="" loading="lazy" decoding="async"></span>
+        <span class="tx"><small>Latest Short</small><b id="s-title">Watch on YouTube</b></span>
+        <svg class="go" aria-hidden="true"><use href="#i-arr"/></svg>
+      </a>
+      <a class="lk" href="https://www.twitch.tv/nshinjii" target="_blank" rel="noopener">
+        <span class="ic" style="color:#b18cff"><svg aria-hidden="true"><use href="#i-twitch"/></svg></span>
+        <span class="tx"><small>Twitch</small><b>Catch me live at twitch.tv/nshinjii</b></span>
+        <svg class="go" aria-hidden="true"><use href="#i-arr"/></svg>
+      </a>
+      <button class="lk" type="button" data-copy="NSHINJI" data-msg="Code NSHINJI copied">
+        <span class="ic"><svg aria-hidden="true"><use href="#i-copy"/></svg></span>
+        <span class="tx"><small>Dubby.gg · 10% off</small><b>Use code <code>NSHINJI</code> at checkout</b></span>
+        <svg class="go" aria-hidden="true"><use href="#i-copy"/></svg>
+      </button>
+      <a class="lk" href="https://nshinjiportfolio.com" target="_blank" rel="noopener">
+        <span class="ic"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+        <span class="tx"><small>Need a website?</small><b>I build them. nshinjiportfolio.com</b></span>
+        <svg class="go" aria-hidden="true"><use href="#i-arr"/></svg>
+      </a>
     </div>
-  </section>
+    <p class="foot">© <span id="yr">2026</span> nshinji media</p>
+  </article>
+</main>
+<div class="toast" id="toast" role="status"></div>
+
 <script>
-// cookie choice: 'all', 'required' or 'none'. 'none' is only kept for this visit, so the banner asks again next time.
+// The hourly GitHub workflow reads this list as its starting archive. Keep this line's shape (uploads list, then videoFilter).
+let uploads=[{"id":"WnypGtR4fjg","title":"How To Play OG Fortnite Chapter 2 Season 2 in 2026 | Project Stellar Tutorial","date":"","type":"Videos"},{"date":"","id":"mI5DrcDWg5c","title":"Bivol Got BANNED From Blox Fruits?! 💀 #BloxFruits #shorts","type":"Shorts"},{"date":"","id":"9AlMwf4K9ww","title":"THIS STEAL A EGG WIFI GLITCH IS BROKEN 💀🥚 #shorts","type":"Shorts"},{"date":"","id":"OHzf1_grFHQ","title":"COMBAT V2 Has Finally Been Revealed! 😳 #shorts","type":"Shorts"},{"date":"","id":"_S6grA5vhoQ","title":"😱 SECRET Sewer Quest in Fountain City! Blox Fruits","type":"Shorts"},{"date":"","id":"81vtZXNPZO0","title":"INSANE Blox Fruits XP GLITCH 😱 Level Up FAST!","type":"Shorts"},{"date":"","id":"PCMz1Vx7j4Y","title":"The NEW Blox Fruits trailer is actually insane 😭🔥","type":"Shorts"}],videoFilter='All';
 (()=>{
-  const KEY='nshinji-consent', OK=['all','required','none'], bar=document.getElementById('ck'), subs=[];
-  let choice=null, returnTo=null;
-  try{ choice=localStorage.getItem(KEY)||sessionStorage.getItem(KEY); }catch(_){}
-  if(!OK.includes(choice)) choice=null;
-  function mark(){ bar.querySelectorAll('[data-ck]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ck===choice))); }
-  function set(c){
-    if(!OK.includes(c)) return;
-    choice=c;
-    try{ localStorage.removeItem(KEY); sessionStorage.removeItem(KEY); (c==='none'?sessionStorage:localStorage).setItem(KEY,c); }catch(_){}
-    bar.hidden=true;
-    subs.forEach(f=>{ try{ f(c); }catch(_){} });
-  }
-  function hide(){ bar.hidden=true; if(returnTo){ returnTo.focus(); returnTo=null; } }
-  function show(focus){ mark(); bar.hidden=false; if(focus) bar.focus(); }
-  bar.addEventListener('click',e=>{ const b=e.target.closest('[data-ck]'); if(b){ set(b.dataset.ck); hide(); } });
-  bar.addEventListener('keydown',e=>{ if(e.key==='Escape' && choice){ hide(); } });
-  document.addEventListener('click',e=>{ const o=e.target.closest('[data-ck-open]'); if(o){ e.preventDefault(); returnTo=o; show(true); } });
-  window.nshinjiConsent={ get:()=>choice, set, on:f=>subs.push(f) };
-  if(!choice) show(false);
+const $=s=>document.querySelector(s);
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const CHANNEL='UCIa-bzHuoaBa6HxGaRTyA7g';
+$('#yr').textContent=new Date().getFullYear();
+
+/* click to enter */
+const gate=$('#gate');
+let entered=false;
+function enter(){ if(entered) return; entered=true; gate.classList.add('gone'); document.body.classList.add('entered'); startTyping(); setTimeout(()=>gate.remove(),900); }
+gate.addEventListener('click',enter);
+gate.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); enter(); } });
+gate.focus({preventScroll:true});
+if(RM) enter();
+
+/* typewriter */
+const LINES=['gaming · music · streams','og fortnite, roblox & blox fruits','top 250 warzone ranked (2025)','building roblox games','i make websites too → nshinjiportfolio.com'];
+const typed=$('#typed');
+function startTyping(){
+  if(RM){ typed.textContent=LINES[0]; return; }
+  let li=0,ci=0,del=false;
+  (function tick(){
+    const line=LINES[li];
+    typed.textContent=line.slice(0,ci);
+    if(!del&&ci<line.length){ ci++; return setTimeout(tick,55+Math.random()*50); }
+    if(!del){ del=true; return setTimeout(tick,1800); }
+    if(ci>0){ ci--; return setTimeout(tick,28); }
+    del=false; li=(li+1)%LINES.length; setTimeout(tick,350);
+  })();
+}
+
+/* latest video + short (kept fresh by the hourly workflow's content.json) */
+function show(list){
+  const vids=list.filter(v=>v.type!=='Shorts'), shorts=list.filter(v=>v.type==='Shorts');
+  const set=(v,a,img,t,fallback)=>{ if(!v) return; $(a).href=(v.type==='Shorts'?'https://www.youtube.com/shorts/':'https://www.youtube.com/watch?v=')+v.id; $(img).src='https://i.ytimg.com/vi/'+v.id+'/'+fallback+'.jpg'; $(t).textContent=v.title; };
+  set(vids[0],'#lk-video','#v-thumb','#v-title','mqdefault');
+  set(shorts[0],'#lk-short','#s-thumb','#s-title','hqdefault');
+}
+const valid=v=>v&&typeof v.id==='string'&&/^[\w-]{11}$/.test(v.id)&&typeof v.title==='string';
+const sortByDate=l=>l.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+show(uploads.filter(valid));
+fetch('./content.json?t='+Math.floor(Date.now()/300000),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{
+  if(d&&d.channelId===CHANNEL&&Array.isArray(d.videos)){ const l=d.videos.filter(valid); if(l.length) show(sortByDate(l)); }
+}).catch(()=>{});
+
+/* view counter */
+fetch('https://abacus.jasoncameron.dev/hit/nshinjimedia/views').then(r=>r.ok?r.json():null).then(d=>{
+  if(!d||typeof d.value!=='number') return;
+  const el=$('#views'); $('#views-wrap').hidden=false;
+  if(RM){ el.textContent=d.value.toLocaleString('en-GB'); return; }
+  const t0=performance.now(), end=d.value;
+  (function f(t){ const p=Math.min(1,(t-t0)/1200); el.textContent=Math.round(end*(1-Math.pow(1-p,3))).toLocaleString('en-GB'); if(p<1) requestAnimationFrame(f); })(t0);
+}).catch(()=>{});
+
+/* copy buttons */
+const toast=$('#toast'); let tt;
+document.addEventListener('click',async e=>{
+  const b=e.target.closest('[data-copy]'); if(!b) return;
+  try{ await navigator.clipboard.writeText(b.dataset.copy); toast.textContent=b.dataset.msg; }catch(_){ toast.textContent=b.dataset.copy; }
+  toast.classList.add('on'); clearTimeout(tt); tt=setTimeout(()=>toast.classList.remove('on'),1800);
+});
+
+/* card tilt + cursor sparkles (mouse only) */
+const card=$('#card');
+if(!RM&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+  let last=0;
+  addEventListener('pointermove',e=>{
+    const r=card.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+    card.style.setProperty('--ry',(x*8).toFixed(2)+'deg'); card.style.setProperty('--rx',(-y*8).toFixed(2)+'deg');
+    const now=performance.now(); if(now-last<40) return; last=now;
+    const s=document.createElement('span'); s.className='spark'; s.style.left=e.clientX-3+'px'; s.style.top=e.clientY-3+'px'; document.body.appendChild(s); setTimeout(()=>s.remove(),700);
+  },{passive:true});
+  document.addEventListener('pointerleave',()=>{ card.style.setProperty('--ry','0deg'); card.style.setProperty('--rx','0deg'); });
+}
+
+/* floating particles */
+const cv=$('#bg'), cx=cv.getContext('2d'); let W,H,P=[];
+function size(){ const d=Math.min(devicePixelRatio||1,2); W=cv.width=innerWidth*d; H=cv.height=innerHeight*d; const n=Math.min(90,Math.round(innerWidth*innerHeight/16000)); P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:(Math.random()*1.6+.4)*d,vy:-(Math.random()*.25+.05)*d,vx:(Math.random()-.5)*.15*d,a:Math.random()*.6+.2})); }
+function draw(){ cx.clearRect(0,0,W,H); for(const p of P){ p.x+=p.vx; p.y+=p.vy; if(p.y<-5){p.y=H+5;p.x=Math.random()*W;} cx.beginPath(); cx.arc(p.x,p.y,p.r,0,6.283); cx.fillStyle=`rgba(177,140,255,${p.a})`; cx.shadowColor='#8b5cf6'; cx.shadowBlur=8; cx.fill(); } if(!RM) requestAnimationFrame(draw); }
+size(); draw(); addEventListener('resize',size);
 })();
 </script>
-  <script>
-let uploads=[{"id":"WnypGtR4fjg","title":"How To Play OG Fortnite Chapter 2 Season 2 in 2026 | Project Stellar Tutorial","date":"","type":"Videos"},{"date":"","id":"mI5DrcDWg5c","title":"Bivol Got BANNED From Blox Fruits?! 💀 #BloxFruits #shorts","type":"Shorts"},{"date":"","id":"9AlMwf4K9ww","title":"THIS STEAL A EGG WIFI GLITCH IS BROKEN 💀🥚 #shorts","type":"Shorts"},{"date":"","id":"OHzf1_grFHQ","title":"COMBAT V2 Has Finally Been Revealed! 😳 #shorts","type":"Shorts"},{"date":"","id":"_S6grA5vhoQ","title":"😱 SECRET Sewer Quest in Fountain City! Blox Fruits","type":"Shorts"},{"date":"","id":"81vtZXNPZO0","title":"INSANE Blox Fruits XP GLITCH 😱 Level Up FAST!","type":"Shorts"},{"date":"","id":"PCMz1Vx7j4Y","title":"The NEW Blox Fruits trailer is actually insane 😭🔥","type":"Shorts"}],videoFilter='All',videoQuery='',videoChecked='';
-
-(function () {
-  const $ = (s, r = document) => r.querySelector(s);
-  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
-  const CHANNEL = 'UCIa-bzHuoaBa6HxGaRTyA7g';
-  const TITLES = { links: 'Socials', videos: 'YouTube Videos', shorts: 'YouTube Shorts', live: 'Live' };
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  $('#year').textContent = new Date().getFullYear();
-
-  /* ---------- Toast & copy ---------- */
-  const toast = $('#toast');
-  let toastTimer;
-  function showToast(msg) { toast.textContent = msg; toast.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 2600); }
-  $$('[data-copy]').forEach(btn => btn.addEventListener('click', async () => {
-    const value = btn.dataset.copy;
-    try { await navigator.clipboard.writeText(value); showToast(btn.dataset.copyMsg || value + ' copied'); }
-    catch { showToast(value === 'NSHINJI' ? 'Copy unavailable. Code: NSHINJI' : 'Add ' + value + ' on Discord'); }
-  }));
-
-  /* ---------- Nav & mobile menu ---------- */
-  const nav = $('#nav'), menuBtn = $('#menu-toggle'), menu = $('#mobile-menu');
-  function setMenu(open) {
-    document.body.classList.toggle('menu-open', open);
-    menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    menu.setAttribute('aria-hidden', String(!open));
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-  menuBtn.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) setMenu(false); });
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
-
-  /* ---------- Reveal on scroll ---------- */
-  const io = 'IntersectionObserver' in window && !reduceMotion
-    ? new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: .08 })
-    : null;
-  $$('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
-
-  /* ---------- Cursor glow on tiles ---------- */
-  $$('.tile').forEach(t => t.addEventListener('pointermove', e => { const r = t.getBoundingClientRect(); t.style.setProperty('--mx', (e.clientX - r.left) + 'px'); t.style.setProperty('--my', (e.clientY - r.top) + 'px'); }));
-
-  /* ---------- Twitch ---------- */
-  const liveStatus = $('#live-status'), liveTitle = $('#live-title'), liveCopy = $('#live-copy');
-  function setLive(state) {
-    liveStatus.classList.toggle('is-live', state === 'online');
-    if (state === 'online') { liveStatus.textContent = '● LIVE NOW'; liveTitle.textContent = 'The stream is live'; liveCopy.textContent = 'Watch here or join the chat directly on Twitch.'; }
-    else if (state === 'offline') { liveStatus.textContent = '◌ OFFLINE'; liveTitle.textContent = 'Not live right now'; liveCopy.textContent = 'Follow the channel to catch the next stream.'; }
-    else { liveStatus.textContent = '◌ STATUS UNAVAILABLE'; liveTitle.textContent = 'Open the Twitch channel'; liveCopy.textContent = 'Twitch status could not load here. The channel link still works.'; }
-  }
-  let twitchStarted = false;
-  function startTwitch() {
-    if (twitchStarted) return;
-    if (window.nshinjiConsent.get() !== 'all') {
-      const box = $('#twitch-player');
-      if (!box.querySelector('.ck-gate')) box.innerHTML = '<div class="ck-gate"><p>The Twitch player sets its own cookies, so it only loads after you accept all cookies.</p><button class="btn btn-sm btn-primary" type="button" data-ck-allow>Accept all and play</button></div>';
-      liveStatus.textContent = '◌ PLAYER OFF'; liveTitle.textContent = 'Watch on Twitch'; liveCopy.textContent = 'The player here is off because of your cookie choice. The Twitch link still works.';
-      return;
-    }
-    $('#twitch-player').replaceChildren();
-    twitchStarted = true;
-    const s = document.createElement('script');
-    s.src = 'https://player.twitch.tv/js/embed/v1.js';
-    s.onload = () => {
-      try {
-        const p = new window.Twitch.Player('twitch-player', { channel: 'nshinjii', width: '100%', height: 480, autoplay: false, muted: true });
-        p.addEventListener(window.Twitch.Player.ONLINE, () => setLive('online'));
-        p.addEventListener(window.Twitch.Player.OFFLINE, () => setLive('offline'));
-      } catch { setLive('unavailable'); }
-    };
-    s.onerror = () => setLive('unavailable');
-    document.head.append(s);
-    setTimeout(() => { if (liveStatus.textContent.includes('Checking')) setLive('unavailable'); }, 12000);
-  }
-
-  /* ---------- Videos ---------- */
-  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const cleanTitle = t => String(t).replace(/\s*#\w+/g, '').trim() || t;
-  function formatViews(v) { const n = Number(v); if (v === null || v === undefined || v === '' || !Number.isFinite(n)) return ''; return n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, '') + 'M' : n >= 1e4 ? Math.round(n / 1e3) + 'K' : n.toLocaleString('en-GB'); }
-  function card(v, i, isShort) {
-    const date = v.date && !Number.isNaN(Date.parse(v.date)) ? new Date(v.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
-    const views = formatViews(v.views);
-    const thumb = 'https://img.youtube.com/vi/' + v.id + '/' + (isShort ? 'hqdefault' : (i === 0 ? 'maxresdefault' : 'hqdefault')) + '.jpg';
-    return '<article class="video-card" style="--i:' + i + '">'
-      + '<button class="video-thumb" data-video="' + v.id + '" aria-label="Watch ' + esc(v.title) + '">'
-      + '<img src="' + thumb + '" alt="" loading="lazy" onerror="this.onerror=null;this.src=\'https://img.youtube.com/vi/' + v.id + '/hqdefault.jpg\'">'
-      + (isShort ? '<span class="tag">Short</span>' : (i === 0 ? '<span class="tag lime">Latest</span>' : ''))
-      + '<span class="play-btn" aria-hidden="true"><svg><use href="#i-play"/></svg></span></button>'
-      + '<div class="video-meta"><div class="meta-row">' + (date ? '<span>' + date + '</span>' : '<span>' + esc(v.type || 'Videos') + '</span>')
-      + (views ? '<span class="views"><svg aria-hidden="true"><use href="#i-eye"/></svg>' + views + ' views</span>' : '') + '</div>'
-      + '<button class="video-title" data-video="' + v.id + '">' + esc(isShort ? cleanTitle(v.title) : v.title) + '</button></div></article>';
-  }
-  function f() {
-    const isShorts = !$('#shorts').hidden;
-    videoFilter = isShorts ? 'Shorts' : 'Videos';
-    const root = $(isShorts ? '#shorts' : '#videos');
-    videoQuery = root.querySelector('input[type=search]').value.trim();
-    const items = [...uploads].sort((a, b) => b.date.localeCompare(a.date)).filter(v => (videoFilter === 'All' || v.type === videoFilter) && v.title.toLowerCase().includes(videoQuery.toLowerCase()));
-    root.querySelector('.video-count').textContent = items.length + ' ' + (isShorts ? (items.length === 1 ? 'short' : 'shorts') : (items.length === 1 ? 'video' : 'videos')) + (videoChecked ? ' · Updated ' + new Date(videoChecked).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '');
-    const grid = root.querySelector('.video-grid');
-    grid.classList.toggle('featured', !isShorts && !videoQuery && items.length > 2);
-    grid.innerHTML = items.length ? items.map((v, i) => card(v, i, isShorts)).join('') : '<div class="video-error">No ' + (isShorts ? 'shorts' : 'videos') + ' found. Try another search.</div>';
-  }
-  function updateHomeVideo() {
-    const sorted = [...uploads].sort((a, b) => b.date.localeCompare(a.date));
-    const latest = sorted.find(v => v.type === 'Videos') || sorted[0];
-    if (latest) {
-      const src = 'https://img.youtube.com/vi/' + latest.id + '/maxresdefault.jpg';
-      const img = $('#hero-thumb');
-      if (img && !img.src.includes('/' + latest.id + '/')) { img.onerror = function () { this.onerror = null; this.src = src.replace('maxresdefault', 'hqdefault'); }; img.src = src; }
-      $('#hero-caption').textContent = latest.title.split('|')[0].trim();
-      $('#hero-watch').dataset.video = latest.id;
-      $('#hero-player').dataset.video = latest.id;
-      const date = latest.date && !Number.isNaN(Date.parse(latest.date)) ? new Date(latest.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
-      const views = formatViews(latest.views);
-      $('#hero-meta').textContent = date ? 'Uploaded ' + date + (views ? ', ' + views + ' views.' : '.') : 'My latest upload on YouTube.';
-    }
-    const vids = sorted.filter(v => v.type === 'Videos' && (!latest || v.id !== latest.id)).slice(0, 3);
-    const shorts = sorted.filter(v => v.type === 'Shorts').slice(0, 4);
-    $('#home-videos').innerHTML = vids.map((v, i) => card(v, i + 1, false)).join('');
-    $('#home-shorts').innerHTML = shorts.map((v, i) => card(v, i, true)).join('');
-    $('#home-videos-block').hidden = !vids.length;
-    $('#home-shorts-block').hidden = !shorts.length;
-  }
-
-  const videoDialog = $('#video-dialog');
-  document.addEventListener('click', e => {
-    const btn = e.target.closest('[data-video]');
-    if (!btn || videoDialog.open) return;
-    const video = uploads.find(v => v.id === btn.dataset.video);
-    if (!video) return;
-    $('#video-title').textContent = video.title;
-    $('#video-youtube').href = 'https://www.youtube.com/watch?v=' + video.id;
-    if (window.nshinjiConsent.get() !== 'all') { $('#youtube-player').innerHTML = '<div class="ck-gate"><p>The YouTube player sets its own cookies, so it only loads after you accept all cookies.</p><button class="btn btn-sm btn-primary" type="button" data-ck-allow>Accept all and play</button></div>'; videoDialog.showModal(); return; }
-    $('#youtube-player').innerHTML = '<iframe title="YouTube video player" src="https://www.youtube-nocookie.com/embed/' + video.id + '?autoplay=1&rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
-    videoDialog.showModal();
-  });
-  document.addEventListener('click', e => { if (e.target.closest('[data-ck-allow]')) window.nshinjiConsent.set('all'); });
-  window.nshinjiConsent.on(c => {
-    if (c !== 'all') return;
-    if (videoDialog.open) { const id = new URL($('#video-youtube').href).searchParams.get('v'); if (id) $('#youtube-player').innerHTML = '<iframe title="YouTube video player" src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>'; }
-    if (!$('#live').hidden) startTwitch();
-  });
-  $$('#video-search,#shorts-search').forEach(input => input.addEventListener('input', f));
-  $('#close-video').addEventListener('click', () => videoDialog.close());
-  videoDialog.addEventListener('close', () => $('#youtube-player').replaceChildren());
-  videoDialog.addEventListener('click', e => { if (e.target === videoDialog) { const r = videoDialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) videoDialog.close(); } });
-
-  let refreshing = false, lastSnapshot = '';
-  async function refreshVideos() {
-    if (refreshing || videoDialog.open) return;
-    refreshing = true;
-    try {
-      const res = await fetch('./content.json?t=' + Math.floor(Date.now() / 300000), { cache: 'no-cache' });
-      if (!res.ok) return;
-      const data = await res.json();
-      if (data.channelId !== CHANNEL || !Array.isArray(data.videos) || !data.videos.length) return;
-      const valid = data.videos.filter(v => v && typeof v.id === 'string' && /^[\w-]{11}$/.test(v.id) && typeof v.title === 'string' && typeof v.date === 'string' && (v.date === '' || !Number.isNaN(Date.parse(v.date))) && ['Videos', 'Shorts'].includes(v.type));
-      if (!valid.length) return;
-      const snapshot = JSON.stringify([valid, data.youtubeUpdatedAt]);
-      if (snapshot === lastSnapshot) return;
-      lastSnapshot = snapshot;
-      uploads = valid.sort((a, b) => b.date.localeCompare(a.date));
-      videoChecked = typeof data.youtubeUpdatedAt === 'string' && !Number.isNaN(Date.parse(data.youtubeUpdatedAt)) ? data.youtubeUpdatedAt : '';
-      updateHomeVideo();
-      if ((location.hash === '#videos' || location.hash === '#shorts') && !document.activeElement?.closest('.video-card')) f();
-    } catch { } finally { refreshing = false; }
-  }
-
-  /* ---------- Tab routing ---------- */
-  const panels = $$('[data-tab]'), links = $$('[data-tab-link]');
-  let firstRoute = true;
-  function route() {
-    if (location.hash === '#main-content') {
-      const current = panels.find(p => !p.hidden);
-      history.replaceState(null, '', current ? '#' + current.dataset.tab : '#home');
-      $('#main-content').focus();
-      return;
-    }
-    let id = location.hash.slice(1);
-    if (id === 'cash-grab' || id === 'tidecatchers') { id = 'home'; history.replaceState(null, '', '#home'); }
-    const tab = id === 'top' ? 'home' : panels.some(p => p.dataset.tab === id) ? id : 'home';
-    panels.forEach(p => { p.hidden = p.dataset.tab !== tab; if (p.hidden) p.querySelectorAll('video').forEach(v => v.pause()); });
-    links.forEach(l => { const on = l.dataset.tabLink === tab; l.classList.toggle('active', on); on ? l.setAttribute('aria-current', 'page') : l.removeAttribute('aria-current'); });
-    setMenu(false);
-    videoDialog.close();
-    window.scrollTo({ top: 0, behavior: 'instant' });
-    if (tab === 'videos' || tab === 'shorts') f();
-    if (tab === 'live') startTwitch();
-    if (!firstRoute && location.hash) {
-      const heading = $('[data-tab="' + tab + '"] h1, [data-tab="' + tab + '"] h2');
-      if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: true }); }
-    }
-    firstRoute = false;
-    document.title = tab === 'home' ? 'Nshinji Media — Gaming, Music & Streams' : TITLES[tab] + ' | Nshinji Media';
-  }
-
-  window.addEventListener('hashchange', route);
-  route();
-  updateHomeVideo();
-  refreshVideos();
-  setInterval(() => { if (!document.hidden) refreshVideos(); }, 300000);
-})();
-  </script>
-  <script>
-  (function(){const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    document.querySelectorAll('.brick').forEach((b,i)=>{
-      b.addEventListener('click',()=>{b.classList.toggle('lit');if(!rm)b.animate([{transform:'none'},{transform:'translateY(-18%) rotate('+(i%2?4:-4)+'deg)',offset:.35},{transform:'translateY(3%)',offset:.75},{transform:'none'}],{duration:520,easing:'cubic-bezier(.2,.9,.25,1)'});});
-      if(!rm)b.animate([{transform:'translateY(-40vh)',opacity:0},{transform:'translateY(4%)',opacity:1,offset:.8},{transform:'none',opacity:1}],{duration:700,delay:700+i*80,easing:'cubic-bezier(.3,.7,.3,1)',fill:'backwards'});
-    });})();
-  </script>
 </body>
 </html>

@@ -4,7 +4,9 @@ Gaming, music and streaming site for Nshinji, published at https://nshinjimedia.
 
 ## Website
 
-`index.html` contains the complete website, styles, and JavaScript. Navigation uses hash links. Videos and Shorts use the public uploads for YouTube channel `UCIa-bzHuoaBa6HxGaRTyA7g`. Contact is by email or Discord `e9vg`.
+`index.html` is a one-page link-in-bio profile (click to enter, brick name, badges, typing bio, socials, latest video and Short, Dubby code, view counter). The latest video and Short come from the public uploads for YouTube channel `UCIa-bzHuoaBa6HxGaRTyA7g`. Discord is `e9vg` (copy button).
+
+To change the typing lines, edit `LINES` in the script. Badges, socials and link buttons are plain HTML in the card.
 
 ## Publishing and automatic updates
 
